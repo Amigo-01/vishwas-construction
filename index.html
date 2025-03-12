@@ -63,6 +63,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
         }
         #home, #about, #services, #projects, #contact {
             background-color: white;
@@ -71,6 +72,28 @@
             padding: 50px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+        }
+        .home-title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #004080;
+            text-transform: uppercase;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .home-tagline {
+            font-size: 24px;
+            color: #002d5a;
+            font-style: italic;
+            margin-top: 10px;
+            animation: slideIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
@@ -97,8 +120,8 @@
     </div>
     
     <section id="home">
-        <h1>Welcome to Vishwas Construction</h1>
-        <p>Your trusted partner in engineering and construction.</p>
+        <h1 class="home-title">Welcome to Vishwas Construction</h1>
+        <p class="home-tagline">Your trusted partner in engineering and construction.</p>
     </section>
     
     <section id="about">
