@@ -74,18 +74,20 @@
             border-radius: 10px;
         }
         .home-title {
-            font-size: 50px;
+            font-size: 60px;
             font-weight: bold;
             color: #004080;
             text-transform: uppercase;
-            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+            text-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+            font-family: 'Georgia', serif;
             animation: glow 2s infinite alternate, fadeIn 2s ease-in-out;
         }
         .home-tagline {
-            font-size: 26px;
+            font-size: 30px;
             color: #002d5a;
             font-style: italic;
-            margin-top: 10px;
+            margin-top: 15px;
+            font-family: 'Courier New', monospace;
             animation: slideIn 2s ease-in-out, fadeInText 3s ease-in-out;
         }
         @keyframes fadeIn {
@@ -97,8 +99,8 @@
             to { transform: translateY(0); opacity: 1; }
         }
         @keyframes glow {
-            from { text-shadow: 4px 4px 15px rgba(0, 64, 128, 0.5); }
-            to { text-shadow: 6px 6px 20px rgba(0, 64, 128, 0.8); }
+            from { text-shadow: 6px 6px 20px rgba(0, 64, 128, 0.6); }
+            to { text-shadow: 8px 8px 25px rgba(0, 64, 128, 1); }
         }
         @keyframes fadeInText {
             from { opacity: 0; transform: scale(0.9); }
