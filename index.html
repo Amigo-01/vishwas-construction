@@ -93,6 +93,11 @@
             text-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
             font-family: 'Georgia', serif;
             animation: glow 2s infinite alternate, fadeIn 2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+        }
+        .home-title span {
+            display: block;
         }
         .home-tagline {
             font-size: 30px;
@@ -147,7 +152,10 @@
             <polygon points="10,50 32,10 54,50" fill="#004080" stroke="#004080" stroke-width="3"></polygon>
             <rect x="20" y="35" width="24" height="15" fill="#004080" stroke="#004080" stroke-width="2"></rect>
         </svg>
-        <h1 class="home-title">Welcome to Vishwas Construction</h1>
+        <h1 class="home-title">
+            <span>Welcome to</span>
+            <span>Vishwas Construction</span>
+        </h1>
         <p class="home-tagline">Your trusted partner in engineering and construction.</p>
     </section>
     
