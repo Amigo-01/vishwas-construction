@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vishwas Construction</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Playfair+Display:wght@900&family=Montserrat:wght@700&display=swap');
     
-    /* Global styles */
+    /* Global Styles */
     * {
       margin: 0;
       padding: 0;
@@ -32,7 +31,7 @@
       100% { background-position: 0% 50%; }
     }
     
-    /* Sidebar navigation */
+    /* Sidebar Navigation */
     .sidebar {
       position: fixed;
       top: 0;
@@ -67,60 +66,47 @@
       transform: scale(1.05);
     }
     
-    /* Content container */
+    /* Main Content */
     .content {
       margin-left: 270px;
       padding: 40px;
     }
     
-    /* Book container */
-    .book {
-      position: relative;
-      width: 90%;
-      max-width: 800px;
-      height: 500px;
-      margin: 0 auto;
-      perspective: 1500px;
+    /* Section Styles */
+    section {
+      min-height: 100vh;
+      padding: 60px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     
-    /* Page styles with glassmorphism and fade transition */
-    .page {
-      position: absolute;
-      width: 100%;
-      height: 100%;
+    .section-container {
       background: rgba(255, 255, 255, 0.15);
-      color: #fff;
       padding: 40px;
       border-radius: 10px;
       box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.3);
+      width: 100%;
+      max-width: 800px;
+      text-align: center;
       transition: opacity 0.5s ease, transform 0.5s ease;
-      opacity: 0;
-      transform: scale(0.95);
-      z-index: 0;
     }
     
-    .page.active {
-      opacity: 1;
-      transform: scale(1);
-      z-index: 10;
-    }
-    
-    /* Typography enhancements */
-    .page h2 {
+    .section-container h2 {
       font-family: 'Playfair Display', serif;
       font-size: 2.8em;
       margin-bottom: 20px;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
     
-    .page p {
+    .section-container p {
       font-size: 1.2em;
       line-height: 1.6;
     }
     
-    /* Responsive adjustments */
+    /* Responsive Adjustments */
     @media (max-width: 768px) {
       .sidebar {
         width: 200px;
@@ -131,19 +117,15 @@
         padding: 20px;
       }
       
-      .book {
-        height: auto;
+      section {
+        padding: 40px 20px;
       }
       
-      .page {
-        padding: 20px;
-      }
-      
-      .page h2 {
+      .section-container h2 {
         font-size: 2em;
       }
       
-      .page p {
+      .section-container p {
         font-size: 1em;
       }
       
@@ -157,40 +139,39 @@
   <!-- Sidebar Navigation -->
   <div class="sidebar">
     <ul>
-      <li><a href="javascript:void(0)" onclick="showPage('home')">Home</a></li>
-      <li><a href="javascript:void(0)" onclick="showPage('about')">About</a></li>
-      <li><a href="javascript:void(0)" onclick="showPage('services')">Services</a></li>
-      <li><a href="javascript:void(0)" onclick="showPage('contact')">Contact</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
   
   <!-- Main Content -->
   <div class="content">
-    <div class="book">
-      <div class="page active" id="home">
+    <section id="home">
+      <div class="section-container">
         <h2>Welcome to Vishwas Construction</h2>
         <p>Reliable construction services with a commitment to quality.</p>
       </div>
-      <div class="page" id="about">
+    </section>
+    <section id="about">
+      <div class="section-container">
         <h2>About Us</h2>
         <p>We are dedicated to delivering high-quality construction solutions with precision and expertise.</p>
       </div>
-      <div class="page" id="services">
+    </section>
+    <section id="services">
+      <div class="section-container">
         <h2>Our Services</h2>
         <p>We offer construction, renovation, and pipeline projects with the highest standards.</p>
       </div>
-      <div class="page" id="contact">
+    </section>
+    <section id="contact">
+      <div class="section-container">
         <h2>Contact Us</h2>
         <p>Email: contact@vishwasconstruction.com<br>Phone: +91 XXXXX XXXXX</p>
       </div>
-    </div>
+    </section>
   </div>
-  
-  <script>
-    function showPage(pageId) {
-      $('.page').removeClass('active');
-      $('#' + pageId).addClass('active');
-    }
-  </script>
 </body>
 </html>
