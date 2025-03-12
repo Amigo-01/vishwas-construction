@@ -107,22 +107,6 @@
             font-family: 'Courier New', monospace;
             animation: slideIn 2s ease-in-out, fadeInText 3s ease-in-out;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideIn {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        @keyframes glow {
-            from { text-shadow: 6px 6px 20px rgba(0, 64, 128, 0.6); }
-            to { text-shadow: 8px 8px 25px rgba(0, 64, 128, 1); }
-        }
-        @keyframes fadeInText {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
     </style>
 </head>
 <body>
@@ -139,44 +123,12 @@
             </div>
         </div>
         <div class="nav">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
         </div>
     </div>
-    
-    <section id="home">
-        <svg class="watermark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="10,50 32,10 54,50" fill="#004080" stroke="#004080" stroke-width="3"></polygon>
-            <rect x="20" y="35" width="24" height="15" fill="#004080" stroke="#004080" stroke-width="2"></rect>
-        </svg>
-        <h1 class="home-title">
-            <span>Welcome to</span>
-            <span>Vishwas Construction</span>
-        </h1>
-        <p class="home-tagline">Your trusted partner in engineering and construction.</p>
-    </section>
-    
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Information about Vishwas Construction.</p>
-    </section>
-    
-    <section id="services">
-        <h2>Our Services</h2>
-        <p>Details about the services offered.</p>
-    </section>
-    
-    <section id="projects">
-        <h2>Our Projects</h2>
-        <p>Showcase of completed projects.</p>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>How to reach Vishwas Construction.</p>
-    </section>
 </body>
 </html>
