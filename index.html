@@ -44,10 +44,9 @@
       width: 90%;
       max-width: 800px;
       height: 500px;
-      perspective: 1500px;
     }
     
-    /* Page styles with glassmorphism effect */
+    /* Page styles with glassmorphism effect and fade transition */
     .page {
       position: absolute;
       width: 100%;
@@ -59,8 +58,7 @@
       box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.3);
-      transform-origin: left;
-      transition: box-shadow 0.4s;
+      transition: opacity 0.5s ease;
       opacity: 0;
       z-index: 0;
     }
@@ -68,24 +66,6 @@
     .page.active {
       opacity: 1;
       z-index: 10;
-      animation: elegantFlip 0.7s ease forwards;
-      box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.6);
-    }
-    
-    /* New elegant flip animation */
-    @keyframes elegantFlip {
-      0% {
-        transform: perspective(600px) rotateY(-90deg) scale(0.95);
-        opacity: 0;
-      }
-      50% {
-        transform: perspective(600px) rotateY(-45deg) scale(1.05);
-        opacity: 0.5;
-      }
-      100% {
-        transform: perspective(600px) rotateY(0deg) scale(1);
-        opacity: 1;
-      }
     }
     
     /* Typography enhancements */
