@@ -19,11 +19,12 @@
         body {
             background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
             color: #fff;
-            overflow-x: hidden;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
+            text-align: center;
         }
         .book {
             position: relative;
@@ -42,7 +43,13 @@
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
             transform-origin: left;
-            transition: transform 1s ease-in-out;
+            transition: transform 0.7s ease-in-out, opacity 0.5s;
+            opacity: 0;
+            z-index: 0;
+        }
+        .page.active {
+            opacity: 1;
+            z-index: 10;
         }
         .page h2 {
             font-family: 'Playfair Display', serif;
@@ -56,11 +63,12 @@
             display: flex;
             justify-content: center;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
         .nav-links button {
             padding: 10px 20px;
             margin: 10px;
-            background: linear-gradient(90deg, #ff512f, #dd2476);
+            background: linear-gradient(90deg, #007bff, #0056b3);
             color: white;
             font-size: 1.2em;
             border: none;
@@ -69,29 +77,41 @@
             transition: 0.4s;
         }
         .nav-links button:hover {
-            background: #007bff;
+            background: #003580;
             transform: scale(1.1);
         }
-        .hidden {
-            display: none;
+        @media (max-width: 768px) {
+            .page {
+                padding: 20px;
+            }
+            .page h2 {
+                font-size: 1.5em;
+            }
+            .page p {
+                font-size: 1em;
+            }
+            .nav-links button {
+                font-size: 1em;
+                padding: 8px 15px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="book">
-        <div class="page" id="home">
+        <div class="page active" id="home">
             <h2>Welcome to Vishwas Construction</h2>
             <p>Reliable construction services with a commitment to quality.</p>
         </div>
-        <div class="page hidden" id="about">
+        <div class="page" id="about">
             <h2>About Us</h2>
             <p>We are dedicated to delivering high-quality construction solutions with precision and expertise.</p>
         </div>
-        <div class="page hidden" id="services">
+        <div class="page" id="services">
             <h2>Our Services</h2>
             <p>We offer construction, renovation, and pipeline projects with the highest standards.</p>
         </div>
-        <div class="page hidden" id="contact">
+        <div class="page" id="contact">
             <h2>Contact Us</h2>
             <p>Email: contact@vishwasconstruction.com<br>Phone: +91 XXXXX XXXXX</p>
         </div>
@@ -106,11 +126,8 @@
     
     <script>
         function showPage(pageId) {
-            $('.page').addClass('hidden');
-            $('#' + pageId).removeClass('hidden').css({transform: 'rotateY(180deg)'});
-            setTimeout(() => {
-                $('#' + pageId).css({transform: 'rotateY(0deg)'});
-            }, 50);
+            $('.page').removeClass('active');
+            $('#' + pageId).addClass('active');
         }
     </script>
 </body>
