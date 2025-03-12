@@ -7,7 +7,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Playfair+Display:wght@900&family=Montserrat:wght@700&display=swap');
-
+    
     /* Global styles */
     * {
       margin: 0;
@@ -17,16 +17,13 @@
       scroll-behavior: smooth;
     }
     
-    /* Animated gradient background */
     body {
       background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
       background-size: 400% 400%;
       animation: gradientAnimation 15s ease infinite;
       color: #fff;
       min-height: 100vh;
-      text-align: center;
       position: relative;
-      padding-top: 60px; /* accommodate fixed nav */
     }
     
     @keyframes gradientAnimation {
@@ -35,45 +32,45 @@
       100% { background-position: 0% 50%; }
     }
     
-    /* Navigation Bar */
-    nav.nav {
+    /* Sidebar navigation */
+    .sidebar {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 15px 0;
+      width: 250px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      padding-top: 60px;
       z-index: 100;
     }
     
-    nav.nav ul {
+    .sidebar ul {
       list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
+      padding: 0;
     }
     
-    nav.nav ul li a {
+    .sidebar ul li {
+      margin: 20px 0;
+    }
+    
+    .sidebar ul li a {
       color: #fff;
       text-decoration: none;
       font-size: 1.2em;
-      position: relative;
-      transition: color 0.3s;
+      padding: 10px 20px;
+      display: block;
+      transition: background 0.3s, transform 0.3s;
     }
     
-    nav.nav ul li a:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      width: 0;
-      height: 2px;
-      background: #00f2ff;
-      transition: width 0.3s;
+    .sidebar ul li a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
     }
     
-    nav.nav ul li a:hover:after {
-      width: 100%;
+    /* Content container */
+    .content {
+      margin-left: 270px;
+      padding: 40px;
     }
     
     /* Book container */
@@ -86,7 +83,7 @@
       perspective: 1500px;
     }
     
-    /* Page styles with glassmorphism and enhanced fade & scale transition */
+    /* Page styles with glassmorphism and fade transition */
     .page {
       position: absolute;
       width: 100%;
@@ -125,51 +122,67 @@
     
     /* Responsive adjustments */
     @media (max-width: 768px) {
+      .sidebar {
+        width: 200px;
+      }
+      
+      .content {
+        margin-left: 220px;
+        padding: 20px;
+      }
+      
       .book {
         height: auto;
       }
+      
       .page {
         padding: 20px;
       }
+      
       .page h2 {
         font-size: 2em;
       }
+      
       .page p {
         font-size: 1em;
       }
-      nav.nav ul li a {
+      
+      .sidebar ul li a {
         font-size: 1em;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="nav">
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
     <ul>
       <li><a href="javascript:void(0)" onclick="showPage('home')">Home</a></li>
       <li><a href="javascript:void(0)" onclick="showPage('about')">About</a></li>
       <li><a href="javascript:void(0)" onclick="showPage('services')">Services</a></li>
       <li><a href="javascript:void(0)" onclick="showPage('contact')">Contact</a></li>
     </ul>
-  </nav>
+  </div>
   
-  <div class="book">
-    <div class="page active" id="home">
-      <h2>Welcome to Vishwas Construction</h2>
-      <p>Reliable construction services with a commitment to quality.</p>
-    </div>
-    <div class="page" id="about">
-      <h2>About Us</h2>
-      <p>We are dedicated to delivering high-quality construction solutions with precision and expertise.</p>
-    </div>
-    <div class="page" id="services">
-      <h2>Our Services</h2>
-      <p>We offer construction, renovation, and pipeline projects with the highest standards.</p>
-    </div>
-    <div class="page" id="contact">
-      <h2>Contact Us</h2>
-      <p>Email: contact@vishwasconstruction.com<br>Phone: +91 XXXXX XXXXX</p>
+  <!-- Main Content -->
+  <div class="content">
+    <div class="book">
+      <div class="page active" id="home">
+        <h2>Welcome to Vishwas Construction</h2>
+        <p>Reliable construction services with a commitment to quality.</p>
+      </div>
+      <div class="page" id="about">
+        <h2>About Us</h2>
+        <p>We are dedicated to delivering high-quality construction solutions with precision and expertise.</p>
+      </div>
+      <div class="page" id="services">
+        <h2>Our Services</h2>
+        <p>We offer construction, renovation, and pipeline projects with the highest standards.</p>
+      </div>
+      <div class="page" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@vishwasconstruction.com<br>Phone: +91 XXXXX XXXXX</p>
+      </div>
     </div>
   </div>
   
