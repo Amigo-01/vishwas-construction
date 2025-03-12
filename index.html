@@ -72,9 +72,20 @@
       box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.6);
     }
     
+    /* Updated flip animation with enhanced perspective, rotation, and scaling */
     @keyframes flipIn {
-      0% { transform: rotateY(-90deg) scale(0.95); }
-      100% { transform: rotateY(0deg) scale(1); }
+      0% {
+        transform: perspective(600px) rotateY(-180deg) scale(0.8);
+        opacity: 0;
+      }
+      50% {
+        transform: perspective(600px) rotateY(90deg) scale(1.1);
+        opacity: 0.5;
+      }
+      100% {
+        transform: perspective(600px) rotateY(0deg) scale(1);
+        opacity: 1;
+      }
     }
     
     /* Typography enhancements */
