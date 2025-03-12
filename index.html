@@ -64,14 +64,26 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            position: relative;
         }
-        #home, #about, #services, #projects, #contact {
+        #home {
             background-color: white;
             margin: 50px auto;
             width: 80%;
             padding: 50px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.1;
+            width: 300px;
+            height: 300px;
         }
         .home-title {
             font-size: 60px;
@@ -131,6 +143,10 @@
     </div>
     
     <section id="home">
+        <svg class="watermark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="10,50 32,10 54,50" fill="#004080" stroke="#004080" stroke-width="3"></polygon>
+            <rect x="20" y="35" width="24" height="15" fill="#004080" stroke="#004080" stroke-width="2"></rect>
+        </svg>
         <h1 class="home-title">Welcome to Vishwas Construction</h1>
         <p class="home-tagline">Your trusted partner in engineering and construction.</p>
     </section>
