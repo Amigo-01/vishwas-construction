@@ -1,199 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vishwas Construction</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Playfair+Display:wght@900&family=Montserrat:wght@700&display=swap');
-    
-    /* Global Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
-    }
-    
-    body {
-      background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
-      background-size: 400% 400%;
-      animation: gradientAnimation 15s ease infinite;
-      color: #fff;
-      min-height: 100vh;
-      position: relative;
-    }
-    
-    @keyframes gradientAnimation {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    
-    /* Sidebar Navigation */
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 250px;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      padding-top: 60px;
-      z-index: 100;
-    }
-    
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-    }
-    
-    .sidebar ul li {
-      margin: 20px 0;
-    }
-    
-    .sidebar ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.2em;
-      padding: 10px 20px;
-      display: block;
-      transition: background 0.3s, transform 0.3s;
-    }
-    
-    .sidebar ul li a:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: scale(1.05);
-    }
-    
-    /* Main Content */
-    .content {
-      margin-left: 270px;
-      padding: 40px;
-    }
-    
-    /* Section Styles */
-    section {
-      min-height: 100vh;
-      padding: 60px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .section-container {
-      background: rgba(255, 255, 255, 0.15);
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      width: 100%;
-      max-width: 800px;
-      text-align: center;
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    
-    .section-container h2 {
-      background-color: transparent;  /* Title background is transparent */
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8em;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      padding: 10px;
-    }
-    
-    .section-container p {
-      font-size: 1.2em;
-      line-height: 1.6;
-    }
-    
-    /* Responsive Images */
-    .responsive-img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-    
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      .sidebar {
-        width: 200px;
-      }
-      
-      .content {
-        margin-left: 220px;
-        padding: 20px;
-      }
-      
-      section {
-        padding: 40px 20px;
-      }
-      
-      .section-container h2 {
-        font-size: 2em;
-      }
-      
-      .section-container p {
-        font-size: 1em;
-      }
-      
-      .sidebar ul li a {
-        font-size: 1em;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishwas Construction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #004080;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-  <!-- Sidebar Navigation -->
-  <div class="sidebar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-  
-  <!-- Main Content -->
-  <div class="content">
-    <section id="home">
-      <div class="section-container">
-        <!-- Static Construction Image for Home -->
-        <img src="https://images.unsplash.com/photo-1581091012184-3f3628b2bd03?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-             alt="Modern Construction Site" class="responsive-img">
-        <h2>Welcome to Vishwas Construction</h2>
-        <p>Reliable construction services with a commitment to quality.</p>
-      </div>
-    </section>
-    <section id="about">
-      <div class="section-container">
-        <!-- Static Construction Image for About -->
-        <img src="https://images.unsplash.com/photo-1603126853535-51aa65b9d8b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-             alt="Construction Team" class="responsive-img">
-        <h2>About Us</h2>
-        <p>We are dedicated to delivering high-quality construction solutions with precision and expertise.</p>
-      </div>
-    </section>
-    <section id="services">
-      <div class="section-container">
-        <!-- Static Construction Image for Services -->
-        <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-             alt="Construction Project" class="responsive-img">
-        <h2>Our Services</h2>
-        <p>We offer construction, renovation, and pipeline projects with the highest standards.</p>
-      </div>
-    </section>
-    <section id="contact">
-      <div class="section-container">
-        <!-- Static Construction Image for Contact -->
-        <img src="https://images.unsplash.com/photo-1596447882671-a694051e9e2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-             alt="Construction Office" class="responsive-img">
-        <h2>Contact Us</h2>
-        <p>Email: contact@vishwasconstruction.com<br>Phone: +91 XXXXX XXXXX</p>
-      </div>
-    </section>
-  </div>
+    <div class="header">
+        <div class="logo-container">
+            <div class="logo">
+                <div class="icon">
+                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="10,50 32,10 54,50" fill="white" stroke="white" stroke-width="3"></polygon>
+                        <rect x="20" y="35" width="24" height="15" fill="white" stroke="white" stroke-width="2"></rect>
+                    </svg>
+                </div>
+                Vishwas Construction
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Welcome to Vishwas Construction</h1>
+        <p>Your trusted partner in engineering and construction.</p>
+    </div>
 </body>
 </html>
