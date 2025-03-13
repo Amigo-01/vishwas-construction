@@ -14,7 +14,6 @@
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f4f4f4;
-            scroll-behavior: smooth;
             color: #333;
         }
         .header {
@@ -64,107 +63,23 @@
             font-size: 22px;
             font-style: italic;
         }
-        .section {
-            padding: 60px 15%;
-            text-align: center;
-            background: linear-gradient(to right, #ffffff, #d9e4f5);
-            border-radius: 10px;
-            margin: 30px auto;
-        }
-        .section h2 {
-            font-size: 36px;
-            color: #004080;
-            margin-bottom: 20px;
-        }
-        .services-list {
-            list-style: none;
-            font-size: 20px;
-        }
-        .services-list li {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin: 15px 0;
-        }
-        .services-list img {
-            width: 35px;
-        }
-        .contact-btn {
-            display: inline-block;
-            padding: 14px 30px;
-            background: #004080;
-            color: white;
-            font-size: 20px;
-            font-weight: 500;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        .contact-btn:hover {
-            background: #002d5a;
-        }
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                text-align: center;
-                padding: 15px;
-            }
-            .nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                margin-top: 10px;
-            }
-            .content {
-                padding-top: 160px;
-            }
-            .section {
-                padding: 50px 5%;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="header">
         <div class="logo">Vishwas Construction</div>
         <div class="nav">
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#services">Our Services</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
         </div>
     </div>
     
-    <div class="content" id="home">
+    <div class="content">
         <h1>Welcome to Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
-    </div>
-
-    <div class="section" id="about">
-        <h2>About Us</h2>
-        <p>Vishwas Construction is dedicated to providing high-quality engineering and construction services...</p>
-    </div>
-
-    <div class="section" id="services">
-        <h2>Our Services</h2>
-        <ul class="services-list">
-            <li><img src="https://img.icons8.com/ios-filled/50/004080/blueprint.png" alt="Vastu">Building plans as per Vastu</li>
-            <li><img src="https://img.icons8.com/ios-filled/50/004080/contract.png" alt="Permission">Permission drawings</li>
-            <li><img src="https://img.icons8.com/ios-filled/50/004080/construction.png" alt="Contracts">Building contracts</li>
-            <li><img src="https://img.icons8.com/ios-filled/50/004080/consultation.png" alt="Consulting">Construction consultancy</li>
-        </ul>
-    </div>
-
-    <div class="section" id="projects">
-        <h2>Our Projects</h2>
-        <p>Explore our portfolio of completed and ongoing projects...</p>
-    </div>
-
-    <div class="section" id="contact">
-        <h2>Contact Us</h2>
-        <p>Reach out to us for consultations, project inquiries, and collaboration opportunities.</p>
-        <a href="mailto:contact@vishwasconstruction.com" class="contact-btn">Email Us</a>
     </div>
 </body>
 </html>
