@@ -6,17 +6,21 @@
     <title>Vishwas Construction</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
             scroll-behavior: smooth;
+            color: #333;
         }
         .header {
             background-color: #004080;
             color: white;
-            padding: 15px;
+            padding: 15px 30px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -25,72 +29,75 @@
             top: 0;
             left: 0;
             z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         .logo {
+            font-size: 28px;
+            font-weight: 600;
+        }
+        .nav {
             display: flex;
-            align-items: center;
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
+            gap: 20px;
         }
         .nav a {
             color: white;
             text-decoration: none;
+            font-weight: 500;
             padding: 10px 15px;
+            transition: 0.3s;
+            border-radius: 5px;
         }
         .nav a:hover {
             background-color: #002d5a;
-            border-radius: 5px;
         }
         .content {
             text-align: center;
-            padding: 150px 20px 100px;
+            padding: 180px 20px 100px;
             background: white;
         }
         .content h1 {
             font-size: 50px;
-            font-weight: 600;
+            font-weight: 700;
             color: #004080;
-            margin: 10px 0;
         }
         .content p {
-            font-size: 24px;
+            font-size: 22px;
             font-style: italic;
-            color: #333;
         }
         .section {
-            padding: 50px;
+            padding: 60px 15%;
             text-align: center;
-            background: linear-gradient(to right, #f4f4f4, #d9e4f5);
+            background: linear-gradient(to right, #ffffff, #d9e4f5);
+            border-radius: 10px;
+            margin: 30px auto;
         }
         .section h2 {
-            font-size: 32px;
+            font-size: 36px;
             color: #004080;
+            margin-bottom: 20px;
         }
         .services-list {
             list-style: none;
-            padding: 0;
             font-size: 20px;
-            color: #333;
         }
         .services-list li {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            margin: 10px 0;
+            gap: 15px;
+            margin: 15px 0;
         }
         .services-list img {
-            width: 30px;
-            height: 30px;
+            width: 35px;
         }
         .contact-btn {
             display: inline-block;
-            padding: 12px 25px;
+            padding: 14px 30px;
             background: #004080;
             color: white;
-            font-size: 18px;
-            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 500;
+            border-radius: 8px;
             text-decoration: none;
             transition: 0.3s;
         }
@@ -101,14 +108,18 @@
             .header {
                 flex-direction: column;
                 text-align: center;
+                padding: 15px;
             }
             .nav {
-                display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
+                margin-top: 10px;
             }
-            .nav a {
-                padding: 10px;
+            .content {
+                padding-top: 160px;
+            }
+            .section {
+                padding: 50px 5%;
             }
         }
     </style>
