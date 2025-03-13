@@ -21,7 +21,6 @@
             position: fixed;
             width: 100%;
             top: 0;
-            left: 0;
             z-index: 1000;
         }
         .logo-container {
@@ -48,6 +47,7 @@
             color: white;
             text-decoration: none;
             padding: 10px 15px;
+            transition: background 0.3s ease-in-out;
         }
         .nav a:hover {
             background-color: #002d5a;
@@ -57,6 +57,7 @@
             padding: 120px 20px;
             position: relative;
             background: white;
+            min-height: 100vh;
         }
         .content::before {
             content: "";
@@ -64,8 +65,8 @@
             top: 55%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
+            width: 450px;
+            height: 450px;
             background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><polygon points="10,50 32,10 54,50" fill="%23004080" stroke="%23004080" stroke-width="3"></polygon><rect x="20" y="35" width="24" height="15" fill="%23004080" stroke="%23004080" stroke-width="2"></rect></svg>');
             background-repeat: no-repeat;
             background-size: contain;
@@ -88,16 +89,27 @@
             color: #333;
         }
         .section {
-            padding: 50px;
+            padding: 60px;
             text-align: center;
         }
-        .blue-background {
+        .section:nth-child(odd) {
+            background-color: white;
+        }
+        .section:nth-child(even) {
             background-color: #004080;
             color: white;
         }
-        .white-background {
-            background-color: white;
-            color: black;
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .services-list {
+            list-style: none;
+            padding: 0;
+            font-size: 20px;
+        }
+        .services-list li {
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -123,30 +135,35 @@
         </div>
     </div>
     
-    <div class="content white-background" id="home">
+    <div class="content" id="home">
         <h1>Welcome to</h1>
         <h1>Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
     </div>
 
-    <div class="section blue-background" id="about">
+    <div class="section" id="about">
         <h2>About Us</h2>
-        <p>Vishwas Construction is dedicated to providing high-quality engineering and construction services. Our commitment to excellence and customer satisfaction has made us a trusted name in the industry.</p>
+        <p>Vishwas Construction is a team of dedicated engineers and builders passionate about creating high-quality structures. Our expertise ranges from Vastu-compliant architectural plans to end-to-end construction solutions. Every project is a testament to our commitment to excellence, precision, and customer satisfaction.</p>
     </div>
 
-    <div class="section white-background" id="services">
+    <div class="section" id="services">
         <h2>Our Services</h2>
-        <p>Building plans as per Vastu, Permission drawings, Building contracts, Construction consultancy.</p>
+        <ul class="services-list">
+            <li>Building plans as per Vastu</li>
+            <li>Permission drawings</li>
+            <li>Building contracts</li>
+            <li>Construction consultancy</li>
+        </ul>
     </div>
 
-    <div class="section blue-background" id="projects">
+    <div class="section" id="projects">
         <h2>Our Projects</h2>
-        <p>Explore our portfolio of completed and ongoing projects showcasing our expertise in engineering and construction.</p>
+        <p>We have successfully delivered projects that stand as benchmarks in the construction industry. From residential homes to large-scale commercial buildings, we ensure that every project is handled with the highest standards of quality and professionalism.</p>
     </div>
 
-    <div class="section white-background" id="contact">
+    <div class="section" id="contact">
         <h2>Contact Us</h2>
-        <p>No 2050 22nd main, behind Adarsha School, Fire Station Road, Vivekananda Nagar, Byadgi, India, 581106</p>
+        <p>No 2050 22nd Main, Behind Adarsha School, Fire Station Road, Vivekananda Nagar, Byadgi, India, 581106</p>
         <p>Phone: 7813841428</p>
         <p>Email: vishwasitand@gmail.com</p>
     </div>
