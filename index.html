@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vishwas Construction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth;
         }
         .header {
             background-color: #004080;
             color: white;
-            padding: 10px;
+            padding: 15px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-        }
-        .logo-container {
-            display: flex;
-            align-items: center;
-            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
         .logo {
             display: flex;
@@ -31,14 +33,6 @@
             font-weight: bold;
             color: white;
         }
-        .icon {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-        }
-        .nav {
-            display: flex;
-        }
         .nav a {
             color: white;
             text-decoration: none;
@@ -46,26 +40,16 @@
         }
         .nav a:hover {
             background-color: #002d5a;
+            border-radius: 5px;
         }
         .content {
             text-align: center;
-            padding: 100px 20px;
-            position: relative;
+            padding: 150px 20px 100px;
             background: white;
-        }
-        .watermark {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 80px;
-            color: rgba(0, 64, 128, 0.25);
-            font-weight: bold;
-            white-space: nowrap;
         }
         .content h1 {
             font-size: 50px;
-            font-weight: bold;
+            font-weight: 600;
             color: #004080;
             margin: 10px 0;
         }
@@ -83,15 +67,6 @@
             font-size: 32px;
             color: #004080;
         }
-        .section p {
-            font-size: 20px;
-            color: #333;
-            max-width: 800px;
-            margin: auto;
-        }
-        .services-section {
-            background-color: white;
-        }
         .services-list {
             list-style: none;
             padding: 0;
@@ -99,23 +74,48 @@
             color: #333;
         }
         .services-list li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
             margin: 10px 0;
+        }
+        .services-list img {
+            width: 30px;
+            height: 30px;
+        }
+        .contact-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #004080;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .contact-btn:hover {
+            background: #002d5a;
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .nav a {
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="logo-container">
-            <div class="logo">
-                <div class="icon">
-                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                        <polygon points="10,50 32,10 54,50" fill="white" stroke="white" stroke-width="3"></polygon>
-                        <rect x="20" y="35" width="24" height="15" fill="white" stroke="white" stroke-width="2"></rect>
-                    </svg>
-                </div>
-                Vishwas Construction
-            </div>
-        </div>
+        <div class="logo">Vishwas Construction</div>
         <div class="nav">
             <a href="#home">Home</a>
             <a href="#about">About Us</a>
@@ -126,35 +126,34 @@
     </div>
     
     <div class="content" id="home">
-        <div class="watermark">Vishwas Construction</div>
-        <h1>Welcome to</h1>
-        <h1>Vishwas Construction</h1>
+        <h1>Welcome to Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
     </div>
 
     <div class="section" id="about">
         <h2>About Us</h2>
-        <p>Vishwas Construction is dedicated to providing high-quality engineering and construction services. With a team of experienced professionals, we specialize in designing and building structures that meet the highest industry standards. Our commitment to excellence and customer satisfaction has made us a trusted name in the industry.</p>
+        <p>Vishwas Construction is dedicated to providing high-quality engineering and construction services...</p>
     </div>
 
-    <div class="section services-section" id="services">
+    <div class="section" id="services">
         <h2>Our Services</h2>
         <ul class="services-list">
-            <li>Building plans as per Vastu</li>
-            <li>Permission drawings</li>
-            <li>Building contracts</li>
-            <li>Construction consultancy</li>
+            <li><img src="https://img.icons8.com/ios-filled/50/004080/blueprint.png" alt="Vastu">Building plans as per Vastu</li>
+            <li><img src="https://img.icons8.com/ios-filled/50/004080/contract.png" alt="Permission">Permission drawings</li>
+            <li><img src="https://img.icons8.com/ios-filled/50/004080/construction.png" alt="Contracts">Building contracts</li>
+            <li><img src="https://img.icons8.com/ios-filled/50/004080/consultation.png" alt="Consulting">Construction consultancy</li>
         </ul>
     </div>
 
     <div class="section" id="projects">
         <h2>Our Projects</h2>
-        <p>Explore our portfolio of completed and ongoing projects showcasing our expertise in engineering and construction.</p>
+        <p>Explore our portfolio of completed and ongoing projects...</p>
     </div>
 
     <div class="section" id="contact">
         <h2>Contact Us</h2>
         <p>Reach out to us for consultations, project inquiries, and collaboration opportunities.</p>
+        <a href="mailto:contact@vishwasconstruction.com" class="contact-btn">Email Us</a>
     </div>
 </body>
 </html>
