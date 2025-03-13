@@ -7,9 +7,9 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
         .header {
             background-color: #004080;
@@ -47,69 +47,45 @@
             color: white;
             text-decoration: none;
             padding: 10px 15px;
-            transition: background 0.3s ease-in-out;
         }
         .nav a:hover {
             background-color: #002d5a;
         }
         .content {
             text-align: center;
-            padding: 120px 20px;
+            padding: 120px 20px 100px;
+            background: url('background1.jpg') center/cover no-repeat;
+            color: white;
             position: relative;
-            background: white;
-            min-height: 100vh;
-        }
-        .content::before {
-            content: "";
-            position: absolute;
-            top: 55%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 450px;
-            height: 450px;
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><polygon points="10,50 32,10 54,50" fill="%23004080" stroke="%23004080" stroke-width="3"></polygon><rect x="20" y="35" width="24" height="15" fill="%23004080" stroke="%23004080" stroke-width="2"></rect></svg>');
-            background-repeat: no-repeat;
-            background-size: contain;
-            opacity: 0.1;
-            z-index: 0;
-        }
-        .content h1, .content p {
-            position: relative;
-            z-index: 1;
         }
         .content h1 {
             font-size: 50px;
             font-weight: bold;
-            color: #004080;
-            margin: 10px 0;
+            color: #ffd700;
+            text-shadow: 2px 2px 5px black;
         }
         .content p {
             font-size: 24px;
             font-style: italic;
-            color: #333;
         }
         .section {
-            padding: 60px;
+            padding: 50px;
             text-align: center;
-        }
-        .section:nth-child(odd) {
-            background-color: white;
-        }
-        .section:nth-child(even) {
-            background-color: #004080;
             color: white;
         }
-        .section h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
+        #about {
+            background: url('background2.jpg') center/cover no-repeat;
         }
-        .services-list {
-            list-style: none;
-            padding: 0;
-            font-size: 20px;
+        #services {
+            background: white;
+            color: black;
         }
-        .services-list li {
-            margin: 10px 0;
+        #projects {
+            background: url('background3.jpg') center/cover no-repeat;
+        }
+        #contact {
+            background: white;
+            color: black;
         }
     </style>
 </head>
@@ -136,19 +112,18 @@
     </div>
     
     <div class="content" id="home">
-        <h1>Welcome to</h1>
-        <h1>Vishwas Construction</h1>
+        <h1>Welcome to Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
     </div>
 
     <div class="section" id="about">
         <h2>About Us</h2>
-        <p>Vishwas Construction is a team of dedicated engineers and builders passionate about creating high-quality structures. Our expertise ranges from Vastu-compliant architectural plans to end-to-end construction solutions. Every project is a testament to our commitment to excellence, precision, and customer satisfaction.</p>
+        <p>Vishwas Construction is dedicated to providing high-quality engineering and construction services. With a team of experienced professionals, we specialize in designing and building structures that meet the highest industry standards. Our commitment to excellence and customer satisfaction has made us a trusted name in the industry.</p>
     </div>
 
     <div class="section" id="services">
         <h2>Our Services</h2>
-        <ul class="services-list">
+        <ul>
             <li>Building plans as per Vastu</li>
             <li>Permission drawings</li>
             <li>Building contracts</li>
@@ -158,14 +133,14 @@
 
     <div class="section" id="projects">
         <h2>Our Projects</h2>
-        <p>We have successfully delivered projects that stand as benchmarks in the construction industry. From residential homes to large-scale commercial buildings, we ensure that every project is handled with the highest standards of quality and professionalism.</p>
+        <p>Explore our portfolio of completed and ongoing projects showcasing our expertise in engineering and construction.</p>
     </div>
 
     <div class="section" id="contact">
         <h2>Contact Us</h2>
         <p>No 2050 22nd Main, Behind Adarsha School, Fire Station Road, Vivekananda Nagar, Byadgi, India, 581106</p>
-        <p>Phone: 7813841428</p>
-        <p>Email: vishwasitand@gmail.com</p>
+        <p>Phone No - 7813841428</p>
+        <p>Mail - vishwasitand@gmail.com</p>
     </div>
 </body>
 </html>
