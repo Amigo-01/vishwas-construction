@@ -53,20 +53,51 @@
             position: relative;
             background: white;
         }
-        .about-section {
-            background: linear-gradient(to right, #e6efff, #d9e4f5);
-            padding: 60px 20px;
-            text-align: center;
+        /* Logo Watermark */
+        .content::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><polygon points="10,50 32,10 54,50" fill="%23004080" stroke="%23004080" stroke-width="3"></polygon><rect x="20" y="35" width="24" height="15" fill="%23004080" stroke="%23004080" stroke-width="2"></rect></svg>');
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0.1;
+            z-index: 0;
         }
-        .about-section h2 {
+        .content h1, .content p {
+            position: relative;
+            z-index: 1;
+        }
+        .content h1 {
+            font-size: 50px;
+            font-weight: bold;
+            color: #004080;
+            margin: 10px 0;
+        }
+        .content p {
+            font-size: 24px;
+            font-style: italic;
+            color: #333;
+        }
+        .section {
+            padding: 50px;
+            text-align: center;
+            background: linear-gradient(to right, #f4f4f4, #d9e4f5);
+        }
+        .section h2 {
             font-size: 36px;
             color: #004080;
-            margin-bottom: 15px;
-            text-transform: uppercase;
             font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
         }
-        .about-section p {
-            font-size: 22px;
+        .section p {
+            font-size: 20px;
             color: #333;
             max-width: 900px;
             margin: auto;
@@ -75,6 +106,19 @@
         .about-highlight {
             font-weight: bold;
             color: #002d5a;
+            font-size: 22px;
+        }
+        .services-section {
+            background-color: white;
+        }
+        .services-list {
+            list-style: none;
+            padding: 0;
+            font-size: 20px;
+            color: #333;
+        }
+        .services-list li {
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -101,15 +145,15 @@
     </div>
     
     <div class="content" id="home">
-        <h1>Step into the Future with</h1>
-        <h1 style="font-size: 60px; font-weight: bold; color: #004080;">Vishwas Construction</h1>
+        <h1>Welcome to</h1>
+        <h1>Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
     </div>
 
-    <div class="about-section" id="about">
+    <div class="section" id="about">
         <h2>About Us</h2>
-        <p>At <span class="about-highlight">Vishwas Construction</span>, we are committed to delivering excellence in engineering and construction. Our experienced team specializes in creating structures that blend innovation, functionality, and quality.</p>
-        <p>We prioritize precision, durability, and customer satisfaction, ensuring that every project meets the highest industry standards.</p>
+        <p><span class="about-highlight">Vishwas Construction</span> is committed to providing top-notch engineering and construction services. Our team of experienced professionals specializes in designing and building structures that adhere to the highest industry standards. <br><br>
+        With a deep-rooted passion for innovation and quality craftsmanship, we aim to transform visions into reality. <span class="about-highlight">Your dream project is our mission</span>, and we ensure precision, durability, and excellence in every endeavor.</p>
     </div>
 
     <div class="section services-section" id="services">
