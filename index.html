@@ -18,6 +18,11 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
         .logo-container {
             display: flex;
@@ -49,15 +54,14 @@
         }
         .content {
             text-align: center;
-            padding: 100px 20px;
+            padding: 120px 20px 100px;
             position: relative;
             background: white;
         }
-        /* Logo Watermark */
         .content::before {
             content: "";
             position: absolute;
-            top: 50%;
+            top: 55%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 400px;
@@ -86,29 +90,16 @@
         .section {
             padding: 50px;
             text-align: center;
-            background: linear-gradient(to right, #f4f4f4, #d9e4f5);
         }
+        .blue-bg { background: #004080; color: white; }
+        .white-bg { background: white; color: #004080; }
         .section h2 {
             font-size: 32px;
-            color: #004080;
         }
         .section p {
             font-size: 20px;
-            color: #333;
             max-width: 800px;
             margin: auto;
-        }
-        .services-section {
-            background-color: white;
-        }
-        .services-list {
-            list-style: none;
-            padding: 0;
-            font-size: 20px;
-            color: #333;
-        }
-        .services-list li {
-            margin: 10px 0;
         }
     </style>
 </head>
@@ -134,37 +125,32 @@
         </div>
     </div>
     
-    <div class="content" id="home">
+    <div class="content white-bg" id="home">
         <h1>Welcome to</h1>
         <h1>Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
     </div>
 
-    <div class="section" id="about">
+    <div class="section blue-bg" id="about">
         <h2>About Us</h2>
-        <p>Vishwas Construction is dedicated to providing high-quality engineering and construction services. With a team of experienced professionals, we specialize in designing and building structures that meet the highest industry standards. Our commitment to excellence and customer satisfaction has made us a trusted name in the industry.</p>
+        <p>Vishwas Construction is committed to delivering high-quality engineering and construction solutions. Our experienced team ensures precision, excellence, and reliability in every project we undertake.</p>
     </div>
 
-    <div class="section services-section" id="services">
+    <div class="section white-bg" id="services">
         <h2>Our Services</h2>
-        <ul class="services-list">
-            <li>Building plans as per Vastu</li>
-            <li>Permission drawings</li>
-            <li>Building contracts</li>
-            <li>Construction consultancy</li>
-        </ul>
+        <p>Building plans as per Vastu | Permission drawings | Building contracts | Construction consultancy</p>
     </div>
 
-    <div class="section" id="projects">
+    <div class="section blue-bg" id="projects">
         <h2>Our Projects</h2>
-        <p>Explore our portfolio of completed and ongoing projects showcasing our expertise in engineering and construction.</p>
+        <p>Explore our completed and ongoing projects, showcasing our expertise in engineering and construction.</p>
     </div>
 
-    <div class="section" id="contact">
+    <div class="section white-bg" id="contact">
         <h2>Contact Us</h2>
-        <p>No 2050 22nd Main, Behind Adarsha School, Fire Station Road, Vivekananda Nagar, Byadgi, India, 581106</p>
-        <p>Phone No - 7813841428</p>
-        <p>Mail - vishwasitand@gmail.com</p>
+        <p>No 2050, 22nd Main, Behind Adarsha School,<br>Fire Station Road, Vivekananda Nagar, Byadgi, India, 581106</p>
+        <p>Phone: 7813841428</p>
+        <p>Email: vishwasitand@gmail.com</p>
     </div>
 </body>
 </html>
