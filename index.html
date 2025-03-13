@@ -10,16 +10,18 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
         }
         .header {
             background-color: #004080;
             color: white;
-            padding: 15px;
+            padding: 10px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
         .logo-container {
             display: flex;
@@ -29,7 +31,7 @@
         .logo {
             display: flex;
             align-items: center;
-            font-size: 26px;
+            font-size: 24px;
             font-weight: bold;
             color: white;
         }
@@ -44,19 +46,18 @@
         .nav a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            transition: 0.3s;
+            padding: 10px 15px;
         }
         .nav a:hover {
             background-color: #002d5a;
-            border-radius: 5px;
         }
         .content {
             text-align: center;
-            padding: 100px 20px;
+            padding: 150px 20px;
             position: relative;
             background: white;
         }
+        /* Logo Watermark */
         .content::before {
             content: "";
             position: absolute;
@@ -76,7 +77,7 @@
             z-index: 1;
         }
         .content h1 {
-            font-size: 55px;
+            font-size: 50px;
             font-weight: bold;
             color: #004080;
             margin: 10px 0;
@@ -90,33 +91,24 @@
             padding: 50px;
             text-align: center;
         }
-        .section:nth-child(even) {
-            background-color: white;
+        .blue-section {
+            background: #004080;
+            color: white;
         }
-        .section:nth-child(odd) {
-            background-color: #d9e4f5;
-        }
-        .section h2 {
-            font-size: 32px;
+        .white-section {
+            background: white;
             color: #004080;
-        }
-        .section p {
-            font-size: 20px;
-            color: #333;
-            max-width: 800px;
-            margin: auto;
-        }
-        .services-section {
-            background-color: white;
         }
         .services-list {
             list-style: none;
             padding: 0;
             font-size: 20px;
-            color: #333;
         }
         .services-list li {
             margin: 10px 0;
+        }
+        .contact-info {
+            font-size: 20px;
         }
     </style>
 </head>
@@ -142,18 +134,18 @@
         </div>
     </div>
     
-    <div class="content" id="home">
+    <div class="content white-section" id="home">
         <h1>Welcome to</h1>
         <h1>Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
     </div>
 
-    <div class="section" id="about">
+    <div class="section blue-section" id="about">
         <h2>About Us</h2>
-        <p>Vishwas Construction is dedicated to providing high-quality engineering and construction services. With a team of experienced professionals, we specialize in designing and building structures that meet the highest industry standards. Our commitment to excellence and customer satisfaction has made us a trusted name in the industry.</p>
+        <p>Vishwas Construction is dedicated to providing high-quality engineering and construction services. With a team of experienced professionals, we specialize in designing and building structures that meet the highest industry standards.</p>
     </div>
 
-    <div class="section services-section" id="services">
+    <div class="section white-section" id="services">
         <h2>Our Services</h2>
         <ul class="services-list">
             <li>Building plans as per Vastu</li>
@@ -163,16 +155,16 @@
         </ul>
     </div>
 
-    <div class="section" id="projects">
+    <div class="section blue-section" id="projects">
         <h2>Our Projects</h2>
         <p>Explore our portfolio of completed and ongoing projects showcasing our expertise in engineering and construction.</p>
     </div>
 
-    <div class="section" id="contact">
+    <div class="section white-section" id="contact">
         <h2>Contact Us</h2>
-        <p>No 2050 22nd main, behind Adarsha School, Fire Station Road, Vivekananda Nagar, Byadgi, India, 581106</p>
-        <p>Phone: 7813841428</p>
-        <p>Email: vishwasitand@gmail.com</p>
+        <p class="contact-info">No 2050, 22nd Main, Behind Adarsha School, Fire Station Road, Vivekananda Nagar, Byadgi, India, 581106</p>
+        <p class="contact-info">Phone: 7813841428</p>
+        <p class="contact-info">Email: vishwasitand@gmail.com</p>
     </div>
 </body>
 </html>
