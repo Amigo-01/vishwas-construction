@@ -19,9 +19,8 @@
             align-items: center;
             justify-content: space-between;
             position: fixed;
-            width: 100%;
             top: 0;
-            left: 0;
+            width: 100%;
             z-index: 1000;
         }
         .logo-container {
@@ -54,15 +53,16 @@
         }
         .content {
             text-align: center;
-            padding: 120px 20px 100px;
+            padding: 100px 20px;
             position: relative;
             background: white;
+            margin-top: 60px;
         }
         /* Logo Watermark */
         .content::before {
             content: "";
             position: absolute;
-            top: 50%;
+            top: 60%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 400px;
@@ -78,7 +78,7 @@
             z-index: 1;
         }
         .content h1 {
-            font-size: 55px;
+            font-size: 50px;
             font-weight: bold;
             color: #004080;
             margin: 10px 0;
@@ -92,14 +92,8 @@
             padding: 50px;
             text-align: center;
         }
-        .blue-section {
-            background: #004080;
-            color: white;
-        }
-        .white-section {
-            background: white;
-            color: #004080;
-        }
+        .blue-bg { background: #004080; color: white; }
+        .white-bg { background: white; color: #004080; }
         .section h2 {
             font-size: 32px;
         }
@@ -107,14 +101,6 @@
             font-size: 20px;
             max-width: 800px;
             margin: auto;
-        }
-        .services-list {
-            list-style: none;
-            padding: 0;
-            font-size: 20px;
-        }
-        .services-list li {
-            margin: 10px 0;
         }
     </style>
 </head>
@@ -140,20 +126,20 @@
         </div>
     </div>
     
-    <div class="content white-section" id="home">
+    <div class="content" id="home">
         <h1>Welcome to</h1>
         <h1>Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
     </div>
 
-    <div class="section blue-section" id="about">
+    <div class="section blue-bg" id="about">
         <h2>About Us</h2>
-        <p>Vishwas Construction is a name synonymous with quality and innovation. We specialize in designing and building structures that blend durability with aesthetic appeal. Our team of experts is dedicated to delivering projects that meet the highest industry standards.</p>
+        <p>Vishwas Construction is dedicated to providing high-quality engineering and construction services. With a team of experienced professionals, we specialize in designing and building structures that meet the highest industry standards. Our commitment to excellence and customer satisfaction has made us a trusted name in the industry.</p>
     </div>
 
-    <div class="section white-section" id="services">
+    <div class="section white-bg" id="services">
         <h2>Our Services</h2>
-        <ul class="services-list">
+        <ul>
             <li>Building plans as per Vastu</li>
             <li>Permission drawings</li>
             <li>Building contracts</li>
@@ -161,12 +147,12 @@
         </ul>
     </div>
 
-    <div class="section blue-section" id="projects">
+    <div class="section blue-bg" id="projects">
         <h2>Our Projects</h2>
         <p>Explore our portfolio of completed and ongoing projects showcasing our expertise in engineering and construction.</p>
     </div>
 
-    <div class="section white-section" id="contact">
+    <div class="section white-bg" id="contact">
         <h2>Contact Us</h2>
         <p>Reach out to us for consultations, project inquiries, and collaboration opportunities.</p>
     </div>
