@@ -54,10 +54,11 @@
         }
         .content {
             text-align: center;
-            padding: 120px 20px 100px;
+            padding: 150px 20px 100px;
             position: relative;
             background: white;
         }
+        /* Logo Watermark */
         .content::before {
             content: "";
             position: absolute;
@@ -91,12 +92,12 @@
             padding: 50px;
             text-align: center;
         }
-        .blue-background {
-            background-color: #004080;
+        .section:nth-child(even) {
+            background: #004080;
             color: white;
         }
-        .white-background {
-            background-color: white;
+        .section:nth-child(odd) {
+            background: white;
             color: #004080;
         }
         .section h2 {
@@ -106,6 +107,14 @@
             font-size: 20px;
             max-width: 800px;
             margin: auto;
+        }
+        .services-list {
+            list-style: none;
+            padding: 0;
+            font-size: 20px;
+        }
+        .services-list li {
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -131,20 +140,20 @@
         </div>
     </div>
     
-    <div class="content white-background" id="home">
+    <div class="content" id="home">
         <h1>Welcome to</h1>
         <h1>Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
     </div>
 
-    <div class="section blue-background" id="about">
+    <div class="section" id="about">
         <h2>About Us</h2>
-        <p>Vishwas Construction is dedicated to providing high-quality engineering and construction services...</p>
+        <p>At Vishwas Construction, we don’t just build structures—we craft lasting landmarks with precision and excellence. With years of expertise, our team is dedicated to delivering high-quality engineering and construction solutions that stand the test of time. Whether it's designing innovative spaces, ensuring Vastu-compliant planning, or executing seamless construction, we take pride in turning visions into reality. Our commitment to professionalism, quality, and customer satisfaction makes us a trusted name in the industry.</p>
     </div>
 
-    <div class="section white-background" id="services">
+    <div class="section" id="services">
         <h2>Our Services</h2>
-        <ul>
+        <ul class="services-list">
             <li>Building plans as per Vastu</li>
             <li>Permission drawings</li>
             <li>Building contracts</li>
@@ -152,12 +161,12 @@
         </ul>
     </div>
 
-    <div class="section blue-background" id="projects">
+    <div class="section" id="projects">
         <h2>Our Projects</h2>
-        <p>Explore our portfolio of completed and ongoing projects.</p>
+        <p>Explore our portfolio of completed and ongoing projects showcasing our expertise in engineering and construction.</p>
     </div>
 
-    <div class="section white-background" id="contact">
+    <div class="section" id="contact">
         <h2>Contact Us</h2>
         <p>Reach out to us for consultations, project inquiries, and collaboration opportunities.</p>
     </div>
