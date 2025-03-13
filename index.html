@@ -14,25 +14,21 @@
         .header {
             background-color: #004080;
             color: white;
-            padding: 10px;
+            padding: 15px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
+            font-size: 18px;
+            font-weight: bold;
         }
         .logo-container {
             display: flex;
             align-items: center;
-            padding: 10px;
         }
         .logo {
             display: flex;
             align-items: center;
-            font-size: 24px;
+            font-size: 26px;
             font-weight: bold;
             color: white;
         }
@@ -41,74 +37,69 @@
             height: 50px;
             margin-right: 10px;
         }
-        .nav {
-            display: flex;
-        }
         .nav a {
             color: white;
             text-decoration: none;
-            padding: 10px 15px;
+            padding: 12px 18px;
+            font-size: 18px;
         }
         .nav a:hover {
             background-color: #002d5a;
         }
         .content {
             text-align: center;
-            padding: 150px 20px 100px;
+            padding: 120px 20px;
             position: relative;
             background: white;
         }
-        /* Logo Watermark */
         .content::before {
             content: "";
             position: absolute;
-            top: 60%;
+            top: 55%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
+            transform: translate(-50%, -45%);
+            width: 420px;
+            height: 420px;
             background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><polygon points="10,50 32,10 54,50" fill="%23004080" stroke="%23004080" stroke-width="3"></polygon><rect x="20" y="35" width="24" height="15" fill="%23004080" stroke="%23004080" stroke-width="2"></rect></svg>');
             background-repeat: no-repeat;
             background-size: contain;
-            opacity: 0.1;
+            opacity: 0.12;
             z-index: 0;
         }
-        .content h1, .content p {
+        .content h1 {
+            font-size: 52px;
+            font-weight: bold;
+            color: #004080;
+            margin: 15px 0;
             position: relative;
             z-index: 1;
         }
-        .content h1 {
-            font-size: 60px;
-            font-weight: bold;
-            color: #004080;
-            margin: 10px 0;
-        }
         .content p {
-            font-size: 24px;
+            font-size: 26px;
             font-style: italic;
             color: #333;
+            position: relative;
+            z-index: 1;
         }
         .section {
-            padding: 50px;
+            padding: 60px;
             text-align: center;
-            background: #004080;
-            color: white;
-        }
-        .section.white {
-            background: white;
-            color: #004080;
+            background: linear-gradient(to right, #f4f4f4, #d9e4f5);
+            font-size: 22px;
+            line-height: 1.6;
         }
         .section h2 {
-            font-size: 32px;
+            font-size: 34px;
+            color: #004080;
+            margin-bottom: 15px;
         }
         .section p {
-            font-size: 20px;
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
+            font-size: 22px;
         }
         .services-section {
             background-color: white;
-            color: #004080;
         }
     </style>
 </head>
@@ -135,28 +126,33 @@
     </div>
     
     <div class="content" id="home">
-        <h1>Step into the Future with</h1>
+        <h1>Welcome to</h1>
         <h1>Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
     </div>
 
     <div class="section" id="about">
         <h2>About Us</h2>
-        <p>Vishwas Construction is dedicated to providing high-quality engineering and construction services. With a team of experienced professionals, we specialize in designing and building structures that meet the highest industry standards. Our commitment to excellence and customer satisfaction has made us a trusted name in the industry.</p>
+        <p>Vishwas Construction is committed to delivering high-quality engineering and construction solutions. Our expert team ensures that every project is executed with precision and excellence, making us a reliable name in the industry.</p>
     </div>
 
-    <div class="section white services-section" id="services">
+    <div class="section services-section" id="services">
         <h2>Our Services</h2>
-        <p>We offer a range of services, including:</p>
-        <p>Building plans as per Vastu, Permission drawings, Building contracts, Construction consultancy</p>
+        <p>We offer a range of construction and engineering services, including:</p>
+        <ul>
+            <li>Building plans as per Vastu</li>
+            <li>Permission drawings</li>
+            <li>Building contracts</li>
+            <li>Construction consultancy</li>
+        </ul>
     </div>
 
     <div class="section" id="projects">
         <h2>Our Projects</h2>
-        <p>Explore our portfolio of completed and ongoing projects showcasing our expertise in engineering and construction.</p>
+        <p>Explore our portfolio of completed and ongoing projects, showcasing our expertise in engineering and construction.</p>
     </div>
 
-    <div class="section white" id="contact">
+    <div class="section" id="contact">
         <h2>Contact Us</h2>
         <p>Reach out to us for consultations, project inquiries, and collaboration opportunities.</p>
     </div>
