@@ -53,7 +53,6 @@
             position: relative;
             background: white;
         }
-        /* Logo Watermark */
         .content::before {
             content: "";
             position: absolute;
@@ -89,24 +88,14 @@
             background: linear-gradient(to right, #f4f4f4, #d9e4f5);
         }
         .section h2 {
-            font-size: 36px;
+            font-size: 32px;
             color: #004080;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
         }
         .section p {
             font-size: 20px;
             color: #333;
-            max-width: 900px;
+            max-width: 800px;
             margin: auto;
-            line-height: 1.6;
-        }
-        .about-highlight {
-            font-weight: bold;
-            color: #002d5a;
-            font-size: 22px;
         }
         .services-section {
             background-color: white;
@@ -119,6 +108,23 @@
         }
         .services-list li {
             margin: 10px 0;
+        }
+        .about-container {
+            text-align: center;
+            padding: 100px 20px;
+            background: white;
+        }
+        .about-container h2 {
+            font-size: 45px;
+            font-weight: bold;
+            color: #004080;
+            margin-bottom: 20px;
+        }
+        .about-container p {
+            font-size: 22px;
+            color: #333;
+            max-width: 900px;
+            margin: auto;
         }
     </style>
 </head>
@@ -145,15 +151,14 @@
     </div>
     
     <div class="content" id="home">
-        <h1>Welcome to</h1>
-        <h1>Vishwas Construction</h1>
+        <h1>Step into the Future with</h1>
+        <h1 style="font-size: 60px;">Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
     </div>
 
-    <div class="section" id="about">
+    <div class="about-container" id="about">
         <h2>About Us</h2>
-        <p><span class="about-highlight">Vishwas Construction</span> is committed to providing top-notch engineering and construction services. Our team of experienced professionals specializes in designing and building structures that adhere to the highest industry standards. <br><br>
-        With a deep-rooted passion for innovation and quality craftsmanship, we aim to transform visions into reality. <span class="about-highlight">Your dream project is our mission</span>, and we ensure precision, durability, and excellence in every endeavor.</p>
+        <p>Vishwas Construction is dedicated to providing high-quality engineering and construction services. With a team of experienced professionals, we specialize in designing and building structures that meet the highest industry standards. Our commitment to excellence and customer satisfaction has made us a trusted name in the industry.</p>
     </div>
 
     <div class="section services-section" id="services">
