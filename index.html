@@ -54,17 +54,17 @@
         }
         .content {
             text-align: center;
-            padding: 100px 20px;
+            padding: 150px 20px 100px;
             position: relative;
             background: white;
-            margin-top: 70px;
         }
+        /* Logo Watermark */
         .content::before {
             content: "";
             position: absolute;
-            top: 55%;
+            top: 60%;
             left: 50%;
-            transform: translate(-50%, -45%);
+            transform: translate(-50%, -50%);
             width: 400px;
             height: 400px;
             background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><polygon points="10,50 32,10 54,50" fill="%23004080" stroke="%23004080" stroke-width="3"></polygon><rect x="20" y="35" width="24" height="15" fill="%23004080" stroke="%23004080" stroke-width="2"></rect></svg>');
@@ -91,14 +91,12 @@
         .section {
             padding: 50px;
             text-align: center;
-        }
-        .blue-background {
-            background-color: #004080;
+            background: #004080;
             color: white;
         }
-        .white-background {
-            background-color: white;
-            color: black;
+        .section.white {
+            background: white;
+            color: #004080;
         }
         .section h2 {
             font-size: 32px;
@@ -107,6 +105,10 @@
             font-size: 20px;
             max-width: 800px;
             margin: auto;
+        }
+        .services-section {
+            background-color: white;
+            color: #004080;
         }
     </style>
 </head>
@@ -132,29 +134,29 @@
         </div>
     </div>
     
-    <div class="content white-background" id="home">
-        <h1>Welcome to</h1>
+    <div class="content" id="home">
+        <h1>Step into the Future with</h1>
         <h1>Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
     </div>
 
-    <div class="section blue-background" id="about">
+    <div class="section" id="about">
         <h2>About Us</h2>
-        <p>At Vishwas Construction, we bring your vision to life with precision and excellence. Our team of skilled professionals is dedicated to delivering high-quality engineering and construction services that adhere to the highest industry standards.</p>
+        <p>Vishwas Construction is dedicated to providing high-quality engineering and construction services. With a team of experienced professionals, we specialize in designing and building structures that meet the highest industry standards. Our commitment to excellence and customer satisfaction has made us a trusted name in the industry.</p>
     </div>
 
-    <div class="section white-background" id="services">
+    <div class="section white services-section" id="services">
         <h2>Our Services</h2>
-        <p>We specialize in various construction-related services, including:</p>
+        <p>We offer a range of services, including:</p>
         <p>Building plans as per Vastu, Permission drawings, Building contracts, Construction consultancy</p>
     </div>
 
-    <div class="section blue-background" id="projects">
+    <div class="section" id="projects">
         <h2>Our Projects</h2>
         <p>Explore our portfolio of completed and ongoing projects showcasing our expertise in engineering and construction.</p>
     </div>
 
-    <div class="section white-background" id="contact">
+    <div class="section white" id="contact">
         <h2>Contact Us</h2>
         <p>Reach out to us for consultations, project inquiries, and collaboration opportunities.</p>
     </div>
