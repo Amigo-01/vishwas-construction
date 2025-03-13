@@ -51,8 +51,7 @@
             text-align: center;
             padding: 100px 20px;
             position: relative;
-            background: #004080;
-            color: white;
+            background: white;
         }
         /* Logo Watermark */
         .content::before {
@@ -63,7 +62,7 @@
             transform: translate(-50%, -50%);
             width: 400px;
             height: 400px;
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><polygon points="10,50 32,10 54,50" fill="%23ffffff" stroke="%23ffffff" stroke-width="3"></polygon><rect x="20" y="35" width="24" height="15" fill="%23ffffff" stroke="%23ffffff" stroke-width="2"></rect></svg>');
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><polygon points="10,50 32,10 54,50" fill="%23004080" stroke="%23004080" stroke-width="3"></polygon><rect x="20" y="35" width="24" height="15" fill="%23004080" stroke="%23004080" stroke-width="2"></rect></svg>');
             background-repeat: no-repeat;
             background-size: contain;
             opacity: 0.1;
@@ -76,22 +75,24 @@
         .content h1 {
             font-size: 50px;
             font-weight: bold;
+            color: #004080;
+            margin: 10px 0;
         }
         .content p {
             font-size: 24px;
             font-style: italic;
+            color: #333;
         }
         .section {
             padding: 50px;
             text-align: center;
         }
-        .blue-section {
+        .section:nth-child(odd) {
+            background-color: white;
+        }
+        .section:nth-child(even) {
             background-color: #004080;
             color: white;
-        }
-        .white-section {
-            background-color: white;
-            color: #004080;
         }
         .section h2 {
             font-size: 32px;
@@ -138,16 +139,16 @@
     
     <div class="content" id="home">
         <h1>Step into the Future with</h1>
-        <h1>Vishwas Construction</h1>
+        <h1 style="font-size: 60px;">Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
     </div>
 
-    <div class="section white-section" id="about">
+    <div class="section" id="about">
         <h2>About Us</h2>
         <p>Vishwas Construction is dedicated to providing high-quality engineering and construction services. With a team of experienced professionals, we specialize in designing and building structures that meet the highest industry standards. Our commitment to excellence and customer satisfaction has made us a trusted name in the industry.</p>
     </div>
 
-    <div class="section blue-section services-section" id="services">
+    <div class="section services-section" id="services">
         <h2>Our Services</h2>
         <ul class="services-list">
             <li>Building plans as per Vastu</li>
@@ -157,12 +158,12 @@
         </ul>
     </div>
 
-    <div class="section white-section" id="projects">
+    <div class="section" id="projects">
         <h2>Our Projects</h2>
         <p>Explore our portfolio of completed and ongoing projects showcasing our expertise in engineering and construction.</p>
     </div>
 
-    <div class="section blue-section" id="contact">
+    <div class="section" id="contact">
         <h2>Contact Us</h2>
         <p>Reach out to us for consultations, project inquiries, and collaboration opportunities.</p>
     </div>
