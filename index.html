@@ -19,8 +19,9 @@
             align-items: center;
             justify-content: space-between;
             position: fixed;
-            top: 0;
             width: 100%;
+            top: 0;
+            left: 0;
             z-index: 1000;
         }
         .logo-container {
@@ -92,15 +93,23 @@
             padding: 50px;
             text-align: center;
         }
-        .blue-bg { background: #004080; color: white; }
-        .white-bg { background: white; color: #004080; }
+        .section:nth-child(odd) {
+            background: white;
+        }
+        .section:nth-child(even) {
+            background: #004080;
+            color: white;
+        }
         .section h2 {
             font-size: 32px;
         }
-        .section p {
+        .services-list {
+            list-style: none;
+            padding: 0;
             font-size: 20px;
-            max-width: 800px;
-            margin: auto;
+        }
+        .services-list li {
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -127,19 +136,19 @@
     </div>
     
     <div class="content" id="home">
-        <h1>Welcome to</h1>
+        <h1>Step into the Future with</h1>
         <h1>Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
     </div>
 
-    <div class="section blue-bg" id="about">
+    <div class="section" id="about">
         <h2>About Us</h2>
         <p>Vishwas Construction is dedicated to providing high-quality engineering and construction services. With a team of experienced professionals, we specialize in designing and building structures that meet the highest industry standards. Our commitment to excellence and customer satisfaction has made us a trusted name in the industry.</p>
     </div>
 
-    <div class="section white-bg" id="services">
+    <div class="section" id="services">
         <h2>Our Services</h2>
-        <ul>
+        <ul class="services-list">
             <li>Building plans as per Vastu</li>
             <li>Permission drawings</li>
             <li>Building contracts</li>
@@ -147,12 +156,12 @@
         </ul>
     </div>
 
-    <div class="section blue-bg" id="projects">
+    <div class="section" id="projects">
         <h2>Our Projects</h2>
         <p>Explore our portfolio of completed and ongoing projects showcasing our expertise in engineering and construction.</p>
     </div>
 
-    <div class="section white-bg" id="contact">
+    <div class="section" id="contact">
         <h2>Contact Us</h2>
         <p>Reach out to us for consultations, project inquiries, and collaboration opportunities.</p>
     </div>
