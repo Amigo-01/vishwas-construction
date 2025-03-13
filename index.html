@@ -53,14 +53,24 @@
             position: relative;
             background: white;
         }
-        .logo-watermark {
+        /* Logo Watermark */
+        .content::before {
+            content: "";
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 300px;
-            height: 300px;
-            opacity: 0.2;
+            width: 400px;
+            height: 400px;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><polygon points="10,50 32,10 54,50" fill="%23004080" stroke="%23004080" stroke-width="3"></polygon><rect x="20" y="35" width="24" height="15" fill="%23004080" stroke="%23004080" stroke-width="2"></rect></svg>');
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        .content h1, .content p {
+            position: relative;
+            z-index: 1;
         }
         .content h1 {
             font-size: 50px;
@@ -125,7 +135,6 @@
     </div>
     
     <div class="content" id="home">
-        <img src="logo.png" alt="Vishwas Construction Logo" class="logo-watermark">
         <h1>Welcome to</h1>
         <h1>Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
