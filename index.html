@@ -53,7 +53,6 @@
             position: relative;
             background: white;
         }
-        /* Logo Watermark */
         .content::before {
             content: "";
             position: absolute;
@@ -86,31 +85,26 @@
         .section {
             padding: 50px;
             text-align: center;
-            background: linear-gradient(to right, #f4f4f4, #d9e4f5);
         }
-        .about-section {
-            padding: 100px 20px;
-            text-align: center;
+        .blue-section {
             background-color: #004080;
             color: white;
         }
-        .about-section h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
+        .light-section {
+            background: linear-gradient(to right, #f4f4f4, #d9e4f5);
         }
-        .about-section p {
+        .section h2 {
+            font-size: 32px;
+        }
+        .section p {
             font-size: 20px;
             max-width: 800px;
             margin: auto;
-        }
-        .services-section {
-            background-color: white;
         }
         .services-list {
             list-style: none;
             padding: 0;
             font-size: 20px;
-            color: #333;
         }
         .services-list li {
             margin: 10px 0;
@@ -145,12 +139,12 @@
         <p>Your trusted partner in engineering and construction.</p>
     </div>
 
-    <div class="about-section" id="about">
+    <div class="section blue-section" id="about">
         <h2>About Us</h2>
         <p>Vishwas Construction is dedicated to providing high-quality engineering and construction services. With a team of experienced professionals, we specialize in designing and building structures that meet the highest industry standards. Our commitment to excellence and customer satisfaction has made us a trusted name in the industry.</p>
     </div>
 
-    <div class="section services-section" id="services">
+    <div class="section light-section" id="services">
         <h2>Our Services</h2>
         <ul class="services-list">
             <li>Building plans as per Vastu</li>
@@ -160,12 +154,12 @@
         </ul>
     </div>
 
-    <div class="section" id="projects">
+    <div class="section blue-section" id="projects">
         <h2>Our Projects</h2>
         <p>Explore our portfolio of completed and ongoing projects showcasing our expertise in engineering and construction.</p>
     </div>
 
-    <div class="section" id="contact">
+    <div class="section light-section" id="contact">
         <h2>Contact Us</h2>
         <p>Reach out to us for consultations, project inquiries, and collaboration opportunities.</p>
     </div>
