@@ -10,6 +10,7 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            transition: background 0.5s ease;
         }
         .header {
             background-color: #004080;
@@ -18,6 +19,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .logo-container {
             display: flex;
@@ -43,6 +45,7 @@
             color: white;
             text-decoration: none;
             padding: 10px 15px;
+            transition: background 0.3s;
         }
         .nav a:hover {
             background-color: #002d5a;
@@ -52,30 +55,18 @@
             padding: 100px 20px;
             position: relative;
             background: white;
+            animation: fadeIn 1s ease-in-out;
         }
-        .content::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><polygon points="10,50 32,10 54,50" fill="%23004080" stroke="%23004080" stroke-width="3"></polygon><rect x="20" y="35" width="24" height="15" fill="%23004080" stroke="%23004080" stroke-width="2"></rect></svg>');
-            background-repeat: no-repeat;
-            background-size: contain;
-            opacity: 0.1;
-            z-index: 0;
-        }
-        .content h1, .content p {
-            position: relative;
-            z-index: 1;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .content h1 {
             font-size: 50px;
             font-weight: bold;
             color: #004080;
             margin: 10px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
         .content p {
             font-size: 24px;
@@ -85,26 +76,23 @@
         .section {
             padding: 50px;
             text-align: center;
-        }
-        .blue-section {
-            background-color: #004080;
-            color: white;
-        }
-        .light-section {
             background: linear-gradient(to right, #f4f4f4, #d9e4f5);
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
         }
         .section h2 {
             font-size: 32px;
+            color: #004080;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
-        .section p {
-            font-size: 20px;
-            max-width: 800px;
-            margin: auto;
+        .services-section {
+            background-color: white;
         }
         .services-list {
             list-style: none;
             padding: 0;
             font-size: 20px;
+            color: #333;
         }
         .services-list li {
             margin: 10px 0;
@@ -139,12 +127,12 @@
         <p>Your trusted partner in engineering and construction.</p>
     </div>
 
-    <div class="section blue-section" id="about">
+    <div class="section" id="about">
         <h2>About Us</h2>
         <p>Vishwas Construction is dedicated to providing high-quality engineering and construction services. With a team of experienced professionals, we specialize in designing and building structures that meet the highest industry standards. Our commitment to excellence and customer satisfaction has made us a trusted name in the industry.</p>
     </div>
 
-    <div class="section light-section" id="services">
+    <div class="section services-section" id="services">
         <h2>Our Services</h2>
         <ul class="services-list">
             <li>Building plans as per Vastu</li>
@@ -154,12 +142,12 @@
         </ul>
     </div>
 
-    <div class="section blue-section" id="projects">
+    <div class="section" id="projects">
         <h2>Our Projects</h2>
         <p>Explore our portfolio of completed and ongoing projects showcasing our expertise in engineering and construction.</p>
     </div>
 
-    <div class="section light-section" id="contact">
+    <div class="section" id="contact">
         <h2>Contact Us</h2>
         <p>Reach out to us for consultations, project inquiries, and collaboration opportunities.</p>
     </div>
