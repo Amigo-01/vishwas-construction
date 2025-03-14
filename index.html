@@ -8,85 +8,70 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
         .header {
             background-color: #004080;
             color: white;
-            padding: 15px 30px;
+            padding: 20px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
             z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         .logo {
-            font-size: 26px;
+            font-size: 28px;
             font-weight: bold;
-            display: flex;
-            align-items: center;
-        }
-        .logo svg {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
         }
         .nav a {
             color: white;
             text-decoration: none;
             padding: 10px 20px;
             font-weight: 500;
-            transition: 0.3s;
         }
         .nav a:hover {
             background-color: #002d5a;
             border-radius: 5px;
         }
         .hero {
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            text-align: center;
-            height: 100vh;
             background: linear-gradient(to right, #004080, #002d5a);
             color: white;
+            text-align: center;
             position: relative;
         }
         .hero::before {
             content: "Vishwas Construction";
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 100px;
+            font-size: 120px;
             font-weight: bold;
             color: rgba(255, 255, 255, 0.1);
-            z-index: 0;
         }
         .section {
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
-            margin: auto;
+        .blue-bg {
+            background: #004080;
+            color: white;
         }
-        .project-card {
+        .white-bg {
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            color: #004080;
+        }
+        .contact {
             text-align: center;
+            padding: 60px;
         }
         .footer {
             background: #002d5a;
@@ -95,17 +80,26 @@
             padding: 20px;
             font-size: 14px;
         }
+        .services-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .service-item {
+            background: white;
+            color: #004080;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="logo">
-            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="10,50 32,10 54,50" fill="white"></polygon>
-                <rect x="20" y="35" width="24" height="15" fill="white"></rect>
-            </svg>
-            Vishwas Construction
-        </div>
+        <div class="logo">Vishwas Construction</div>
         <div class="nav">
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -114,37 +108,35 @@
             <a href="#contact">Contact</a>
         </div>
     </div>
-    
+
     <div class="hero" id="home">
         <h1>Welcome to Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
     </div>
 
-    <div class="section" id="about">
+    <div class="section blue-bg" id="about">
         <h2>About Us</h2>
-        <p>Vishwas Construction is committed to delivering high-quality engineering and construction solutions. Our experienced team ensures precision, excellence, and reliability in every project we undertake.</p>
+        <p>We are dedicated to providing top-notch engineering and construction solutions, ensuring precision and quality in every project.</p>
     </div>
 
-    <div class="section" id="services">
+    <div class="section white-bg" id="services">
         <h2>Our Services</h2>
-        <p>Building plans as per Vastu | Permission drawings | Building contracts | Construction consultancy</p>
-    </div>
-
-    <div class="section" id="projects">
-        <h2>Our Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Commercial Building</h3>
-                <p>Innovative and modern commercial spaces.</p>
-            </div>
-            <div class="project-card">
-                <h3>Residential Complex</h3>
-                <p>Luxurious and comfortable living spaces.</p>
-            </div>
+        <div class="services-list">
+            <div class="service-item">Building Plans</div>
+            <div class="service-item">Permission Drawings</div>
+            <div class="service-item">Construction Consultancy</div>
+            <div class="service-item">Building Contracts</div>
+            <div class="service-item">Structural Engineering</div>
+            <div class="service-item">Site Supervision</div>
         </div>
     </div>
 
-    <div class="section" id="contact">
+    <div class="section blue-bg" id="projects">
+        <h2>Our Projects</h2>
+        <p>Explore our portfolio of successfully completed residential and commercial projects.</p>
+    </div>
+
+    <div class="contact white-bg" id="contact">
         <h2>Contact Us</h2>
         <p>No 2050, 22nd Main, Behind Adarsha School,<br>Fire Station Road, Vivekananda Nagar, Byadgi, India, 581106</p>
         <p>Phone: 7813841428</p>
