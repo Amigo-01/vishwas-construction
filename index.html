@@ -28,6 +28,13 @@
         .logo {
             font-size: 28px;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
         }
         .nav a {
             color: white;
@@ -56,6 +63,9 @@
             font-size: 120px;
             font-weight: bold;
             color: rgba(255, 255, 255, 0.1);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         .section {
             padding: 80px 20px;
@@ -99,7 +109,10 @@
 </head>
 <body>
     <div class="header">
-        <div class="logo">Vishwas Construction</div>
+        <div class="logo">
+            <img src="logo.png" alt="Vishwas Construction Logo">
+            Vishwas Construction
+        </div>
         <div class="nav">
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -116,7 +129,7 @@
 
     <div class="section blue-bg" id="about">
         <h2>About Us</h2>
-        <p>We are dedicated to providing top-notch engineering and construction solutions, ensuring precision and quality in every project.</p>
+        <p>Vishwas Construction is a premier engineering and construction firm dedicated to quality and excellence. We specialize in creating modern, vastu-compliant structures that align with our clients’ needs. With years of experience in the field, our team ensures that each project meets the highest industry standards. From initial planning to final execution, we focus on precision, durability, and client satisfaction.</p>
     </div>
 
     <div class="section white-bg" id="services">
@@ -127,7 +140,7 @@
             <div class="service-item">Construction Consultancy</div>
             <div class="service-item">Building Contracts</div>
             <div class="service-item">Structural Engineering</div>
-            <div class="service-item">Site Supervision</div>
+            <div class="service-item">Front Elevation 3D Drawings</div>
         </div>
     </div>
 
