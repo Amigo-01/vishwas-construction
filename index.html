@@ -9,20 +9,43 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e3e3e3;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
         }
         .header {
-            background-color: #003366;
+            background-color: #004080;
             color: white;
             padding: 20px;
             text-align: center;
-            font-size: 26px;
+            font-size: 28px;
             font-weight: bold;
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
             z-index: 1000;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background: #002d5a;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 70px;
+            z-index: 999;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        .nav a:hover {
+            background: #004080;
+            border-radius: 5px;
         }
         .hero {
             position: relative;
@@ -34,113 +57,63 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            animation: fadeIn 2s;
-        }
-        .hero h1 {
-            font-size: 55px;
-            animation: slideIn 2s;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideIn {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        .nav {
-            display: flex;
-            justify-content: center;
-            background: #002b5e;
-            padding: 12px;
-            position: fixed;
-            width: 100%;
-            top: 60px;
-            z-index: 999;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            padding: 12px 22px;
-            margin: 0 12px;
+            font-size: 40px;
             font-weight: bold;
         }
-        .nav a:hover {
-            background: #004080;
-            border-radius: 5px;
-        }
-        .parallax {
-            background: url('parallax.jpg') no-repeat center center/cover;
-            height: 350px;
-            background-attachment: fixed;
-        }
-        .services {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 60px;
+        .services, .projects, .testimonials, .contact {
+            text-align: center;
+            padding: 50px;
             background: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .service-card {
             background: #004080;
             color: white;
-            padding: 24px;
+            padding: 20px;
             margin: 15px;
-            width: 280px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-radius: 12px;
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            width: 260px;
+            display: inline-block;
+            border-radius: 10px;
+            transition: 0.3s;
+            font-size: 20px;
         }
         .service-card:hover {
             transform: scale(1.1);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        }
-        .projects {
-            text-align: center;
-            padding: 60px;
-            background: #e3e3e3;
+            background: #002d5a;
         }
         .projects img {
-            width: 100%;
-            max-width: 650px;
-            border-radius: 12px;
-        }
-        .testimonials {
-            text-align: center;
-            padding: 60px;
-            background: white;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 10px;
         }
         .testimonial {
-            max-width: 650px;
+            max-width: 600px;
             margin: auto;
             font-style: italic;
-            border-left: 5px solid #004080;
-            padding-left: 24px;
-        }
-        .contact {
-            text-align: center;
-            padding: 60px;
-            background: #e3e3e3;
+            padding-left: 20px;
+            border-left: 4px solid #004080;
         }
         .contact-form input, .contact-form textarea {
-            width: 85%;
+            width: 80%;
             padding: 12px;
-            margin: 12px 0;
+            margin: 10px 0;
             border: 1px solid #ccc;
-            border-radius: 6px;
+            border-radius: 5px;
+            font-size: 16px;
         }
         .contact-form button {
             background: #004080;
             color: white;
             padding: 12px 24px;
             border: none;
-            border-radius: 6px;
+            border-radius: 5px;
             cursor: pointer;
-            transition: background 0.3s;
+            font-size: 18px;
         }
         .contact-form button:hover {
-            background: #002b5e;
+            background: #002d5a;
         }
     </style>
 </head>
@@ -153,11 +126,11 @@
         <a href="#contact">Contact</a>
     </div>
     <div class="hero">
-        <h1>Welcome to Our Company</h1>
-        <p>We Build Your Dreams</p>
+        Welcome to Our Company<br>
+        <span style="font-size: 24px;">We Build Your Dreams</span>
     </div>
-    <div class="parallax"></div>
     <div class="services" id="services">
+        <h2>Our Services</h2>
         <div class="service-card">Construction</div>
         <div class="service-card">Architectural Design</div>
         <div class="service-card">Project Management</div>
