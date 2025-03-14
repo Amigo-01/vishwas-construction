@@ -4,166 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vishwas Construction</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
         }
         .header {
             background-color: #004080;
             color: white;
-            padding: 20px;
+            padding: 10px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
             z-index: 1000;
         }
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
+        .logo-container {
             display: flex;
             align-items: center;
+            padding: 10px;
         }
-        .logo svg {
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        .icon {
             width: 50px;
             height: 50px;
             margin-right: 10px;
         }
+        .nav {
+            display: flex;
+        }
         .nav a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            font-weight: 500;
+            padding: 10px 15px;
         }
         .nav a:hover {
             background-color: #002d5a;
-            border-radius: 5px;
         }
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            background: white;
-            color: #004080;
+        .content {
             text-align: center;
+            padding: 120px 20px 100px;
             position: relative;
+            background: white;
         }
-        .hero::before {
+        .content::before {
             content: "";
             position: absolute;
-            width: 500px;
-            height: 500px;
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><polygon points="10,50 32,10 54,50" fill="#004080" opacity="0.05" stroke="#004080" stroke-width="3"></polygon><rect x="20" y="35" width="24" height="15" fill="#004080" opacity="0.05" stroke="#004080" stroke-width="2"></rect></svg>');
-            background-repeat: no-repeat;
-            background-size: contain;
-            opacity: 0.1;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><polygon points="10,50 32,10 54,50" fill="%23004080" stroke="%23004080" stroke-width="3"></polygon><rect x="20" y="35" width="24" height="15" fill="%23004080" stroke="%23004080" stroke-width="2"></rect></svg>');
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0.05;
+            z-index: 0;
+        }
+        .content h1, .content p {
+            position: relative;
+            z-index: 1;
+        }
+        .content h1 {
+            font-size: 50px;
+            font-weight: bold;
+            color: #004080;
+            margin: 10px 0;
+        }
+        .content p {
+            font-size: 24px;
+            font-style: italic;
+            color: #333;
         }
         .section {
-            padding: 80px 20px;
+            padding: 50px;
             text-align: center;
         }
-        .blue-bg {
-            background: #004080;
-            color: white;
+        .blue-bg { background: #004080; color: white; }
+        .white-bg { background: white; color: #004080; }
+        .section h2 {
+            font-size: 32px;
         }
-        .white-bg {
-            background: white;
-            color: #004080;
-        }
-        .contact {
-            text-align: center;
-            padding: 60px;
-        }
-        .footer {
-            background: #002d5a;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
-        .services-list {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .service-item {
-            background: white;
-            color: #004080;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            width: 250px;
-            text-align: center;
+        .section p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: auto;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="logo">
-            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="10,50 32,10 54,50" fill="white" stroke="white" stroke-width="3"></polygon>
-                <rect x="20" y="35" width="24" height="15" fill="white" stroke="white" stroke-width="2"></rect>
-            </svg>
-            Vishwas Construction
+        <div class="logo-container">
+            <div class="logo">
+                <div class="icon">
+                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="10,50 32,10 54,50" fill="white" stroke="white" stroke-width="3"></polygon>
+                        <rect x="20" y="35" width="24" height="15" fill="white" stroke="white" stroke-width="2"></rect>
+                    </svg>
+                </div>
+                Vishwas Construction
+            </div>
         </div>
         <div class="nav">
             <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Our Services</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
     </div>
-
-    <div class="hero" id="home">
-        <h1>Welcome to Vishwas Construction</h1>
+    
+    <div class="content white-bg" id="home">
+        <h1>Welcome to</h1>
+        <h1>Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
     </div>
 
     <div class="section blue-bg" id="about">
         <h2>About Us</h2>
-        <p>Vishwas Construction is a leading engineering and construction firm dedicated to excellence and precision. We specialize in Vastu-compliant building designs, offering structural integrity and innovative planning solutions. Our experienced team is committed to high-quality standards and customer satisfaction.</p>
+        <p>Vishwas Construction is a leading engineering and construction firm dedicated to delivering high-quality solutions. With years of expertise, we specialize in providing innovative, sustainable, and cost-effective designs. Our commitment to precision, excellence, and reliability has earned us a reputation for trust and quality in the industry.</p>
     </div>
 
     <div class="section white-bg" id="services">
         <h2>Our Services</h2>
-        <div class="services-list">
-            <div class="service-item">Building Plans</div>
-            <div class="service-item">Permission Drawings</div>
-            <div class="service-item">Construction Consultancy</div>
-            <div class="service-item">Building Contracts</div>
-            <div class="service-item">Structural Engineering</div>
-            <div class="service-item">Front Elevation 3D Drawings</div>
-        </div>
+        <p>Building plans as per Vastu | Permission drawings | Building contracts | Construction consultancy | Front Elevation 3D Drawings</p>
     </div>
 
     <div class="section blue-bg" id="projects">
         <h2>Our Projects</h2>
-        <p>Explore our portfolio of successfully completed residential and commercial projects.</p>
+        <p>Explore our completed and ongoing projects, showcasing our expertise in engineering and construction.</p>
     </div>
 
-    <div class="contact white-bg" id="contact">
+    <div class="section white-bg" id="contact">
         <h2>Contact Us</h2>
         <p>No 2050, 22nd Main, Behind Adarsha School,<br>Fire Station Road, Vivekananda Nagar, Byadgi, India, 581106</p>
         <p>Phone: 7813841428</p>
         <p>Email: vishwasitand@gmail.com</p>
-    </div>
-
-    <div class="footer">
-        <p>&copy; 2025 Vishwas Construction. All rights reserved.</p>
     </div>
 </body>
 </html>
