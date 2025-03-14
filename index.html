@@ -3,144 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Name</title>
+    <title>Futuristic Company</title>
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #eef1f7;
         }
         .header {
-            background: linear-gradient(90deg, #002d5a, #004080);
+            background: linear-gradient(90deg, #1e3c72, #2a5298);
             color: white;
-            padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-        .logo {
-            font-size: 28px;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
             font-weight: bold;
-            letter-spacing: 2px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background: #2a5298;
+            padding: 10px;
         }
         .nav a {
             color: white;
             text-decoration: none;
-            padding: 12px 20px;
+            padding: 15px 20px;
             margin: 0 10px;
+            font-size: 18px;
             transition: 0.3s;
-            font-weight: bold;
-            border-radius: 5px;
         }
         .nav a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
         }
         .hero {
-            padding: 150px 20px;
             text-align: center;
-            background: url('https://source.unsplash.com/1600x900/?architecture,city') no-repeat center center/cover;
+            padding: 80px 20px;
+            background: url('https://source.unsplash.com/1600x900/?architecture,construction') no-repeat center/cover;
             color: white;
+            font-size: 32px;
+            font-weight: bold;
             position: relative;
         }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
         .hero h1 {
-            font-size: 50px;
-            margin: 0;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            position: relative;
+            z-index: 1;
+            font-size: 48px;
         }
         .hero p {
+            position: relative;
+            z-index: 1;
             font-size: 22px;
-            max-width: 800px;
-            margin: 20px auto;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            max-width: 600px;
+            margin: auto;
         }
-        .section {
-            padding: 60px;
+        .services, .about, .contact {
             text-align: center;
+            padding: 50px 20px;
         }
-        .dark-bg { background: #002d5a; color: white; }
-        .light-bg { background: white; color: #004080; }
-        .services-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
+        .services h2, .about h2, .contact h2 {
+            font-size: 32px;
+            color: #1e3c72;
         }
-        .service-box {
-            background: white;
-            padding: 20px;
-            width: 280px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-        .service-box:hover {
-            transform: translateY(-5px);
+        .services p, .about p, .contact p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: auto;
+            color: #333;
         }
         .footer {
-            background-color: #001a3d;
-            color: white;
             text-align: center;
             padding: 20px;
-            font-size: 14px;
+            background: #1e3c72;
+            color: white;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">Company Name</div>
-        <div class="nav">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </div>
+    <div class="header">Futuristic Company</div>
+    
+    <div class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
     </div>
     
     <div class="hero" id="home">
-        <h1>Welcome to Our Company</h1>
-        <p>Delivering excellence through innovation and professionalism.</p>
+        <h1>Welcome to Futuristic Company</h1>
+        <p>Innovating the Future of Engineering & Construction</p>
     </div>
-
-    <div class="section dark-bg" id="about">
+    
+    <div class="about" id="about">
         <h2>About Us</h2>
-        <p>We are industry leaders providing top-notch services that redefine quality and efficiency. Our goal is to innovate and build lasting relationships with our clients.</p>
+        <p>We specialize in providing cutting-edge engineering solutions, ensuring quality and sustainability in all our projects. Our team is dedicated to innovation and excellence.</p>
     </div>
-
-    <div class="section light-bg" id="services">
+    
+    <div class="services" id="services">
         <h2>Our Services</h2>
-        <div class="services-container">
-            <div class="service-box">
-                <h3>Consulting</h3>
-                <p>Providing expert advice and guidance.</p>
-            </div>
-            <div class="service-box">
-                <h3>Project Management</h3>
-                <p>Efficient handling of complex projects.</p>
-            </div>
-            <div class="service-box">
-                <h3>Design & Development</h3>
-                <p>Innovative solutions for modern needs.</p>
-            </div>
-        </div>
+        <p>We offer a wide range of services including architectural design, construction management, and 3D elevation planning.</p>
     </div>
-
-    <div class="section dark-bg" id="contact">
+    
+    <div class="contact" id="contact">
         <h2>Contact Us</h2>
-        <p>Email: contact@company.com</p>
-        <p>Phone: +1234567890</p>
-        <p>Address: 123 Business Street, City, Country</p>
+        <p>Email: contact@futuristiccompany.com | Phone: +123 456 7890</p>
     </div>
-
-    <div class="footer">
-        <p>&copy; 2025 Company Name. All rights reserved.</p>
-    </div>
+    
+    <div class="footer">&copy; 2025 Futuristic Company. All Rights Reserved.</div>
 </body>
 </html>
