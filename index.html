@@ -7,6 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
@@ -50,8 +51,8 @@
         .content {
             text-align: center;
             padding: 120px 20px 100px;
-            position: relative;
             background: white;
+            position: relative;
         }
         .content::before {
             content: "";
@@ -59,17 +60,12 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
+            width: 500px;
+            height: 500px;
             background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><polygon points="10,50 32,10 54,50" fill="%23004080" stroke="%23004080" stroke-width="3"></polygon><rect x="20" y="35" width="24" height="15" fill="%23004080" stroke="%23004080" stroke-width="2"></rect></svg>');
             background-repeat: no-repeat;
             background-size: contain;
             opacity: 0.1;
-            z-index: 0;
-        }
-        .content h1, .content p {
-            position: relative;
-            z-index: 1;
         }
         .section {
             padding: 50px;
@@ -77,14 +73,6 @@
         }
         .blue-bg { background: #004080; color: white; }
         .white-bg { background: white; color: #004080; }
-        .section h2 {
-            font-size: 32px;
-        }
-        .section p {
-            font-size: 20px;
-            max-width: 800px;
-            margin: auto;
-        }
     </style>
 </head>
 <body>
@@ -109,26 +97,34 @@
         </div>
     </div>
     
-    <div class="content white-bg" id="home">
-        <h1>Welcome to</h1>
-        <h1>Vishwas Construction</h1>
+    <div class="content" id="home">
+        <h1>Welcome to Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
     </div>
 
     <div class="section blue-bg" id="about">
         <h2>About Us</h2>
-        <p>Vishwas Construction is a trusted name in engineering and construction, offering high-quality solutions for residential and commercial projects. We specialize in Vastu-compliant designs, building contracts, and front elevation 3D drawings.</p>
+        <p>Vishwas Construction is committed to delivering high-quality engineering and construction solutions. 
+           Our team specializes in residential, commercial, and industrial projects, ensuring durability, 
+           efficiency, and vastu-compliant designs. Our mission is to create well-structured, modern, and 
+           functional buildings that stand the test of time.</p>
     </div>
 
     <div class="section white-bg" id="services">
         <h2>Our Services</h2>
-        <p>Building plans as per Vastu | Permission drawings | Front Elevation 3D Drawings | Building contracts | Construction consultancy</p>
-        <a href="#contact" style="color: #004080; font-weight: bold;">Explore Our Services</a>
+        <p>We offer a range of services including:</p>
+        <ul>
+            <li>Building plans as per Vastu</li>
+            <li>Permission drawings</li>
+            <li>Building contracts</li>
+            <li>Front elevation 3D drawings</li>
+            <li>Construction consultancy</li>
+        </ul>
     </div>
 
     <div class="section blue-bg" id="projects">
         <h2>Our Projects</h2>
-        <p>Explore our completed and ongoing projects, showcasing our expertise in engineering and construction. We have successfully delivered numerous residential and commercial projects with top-notch quality and precision.</p>
+        <p>Explore our completed and ongoing projects, showcasing our expertise in engineering and construction.</p>
     </div>
 
     <div class="section white-bg" id="contact">
