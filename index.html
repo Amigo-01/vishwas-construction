@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Solutions</title>
+    <title>Company Name</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #eef2f3;
+            background-color: #f4f4f4;
+            color: #333;
         }
         .header {
-            background-color: #2c3e50;
+            background-color: #004080;
             color: white;
             padding: 15px 20px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
             position: fixed;
             width: 100%;
             top: 0;
@@ -25,79 +26,60 @@
             z-index: 1000;
         }
         .logo {
-            font-size: 26px;
+            font-size: 24px;
             font-weight: bold;
         }
         .nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
+            padding: 10px 15px;
             transition: 0.3s;
         }
         .nav a:hover {
-            text-decoration: underline;
-            color: #f39c12;
+            background-color: #002d5a;
         }
-        .hero {
+        .content {
+            padding: 100px 20px 50px;
             text-align: center;
-            padding: 150px 20px;
-            background: url('https://source.unsplash.com/1600x900/?business,corporate') no-repeat center center/cover;
-            color: white;
             position: relative;
+            background: white;
         }
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
+        .content h1 {
+            font-size: 48px;
+            color: #004080;
+            margin-bottom: 10px;
         }
-        .hero h1, .hero p {
-            position: relative;
-            z-index: 1;
-        }
-        .hero h1 {
-            font-size: 50px;
-            margin: 10px 0;
-        }
-        .hero p {
-            font-size: 22px;
-            max-width: 600px;
+        .content p {
+            font-size: 20px;
+            max-width: 800px;
             margin: auto;
+            color: #555;
         }
         .section {
-            padding: 60px;
+            padding: 50px;
             text-align: center;
         }
-        .dark-bg { background: #2c3e50; color: white; }
-        .light-bg { background: white; color: #2c3e50; }
-        .services-grid {
+        .blue-bg { background: #004080; color: white; }
+        .white-bg { background: white; color: #004080; }
+        .services {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
         }
-        .service-box {
-            width: 300px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        .service-item {
             background: white;
-            transition: 0.3s;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
         }
-        .service-box:hover {
-            transform: translateY(-5px);
-            background: #f1c40f;
-            color: #2c3e50;
-        }
-        .contact-info p {
-            font-size: 18px;
+        .service-item h3 {
+            color: #004080;
         }
         .footer {
-            background: #2c3e50;
+            background-color: #002d5a;
             color: white;
             text-align: center;
             padding: 15px;
@@ -107,60 +89,52 @@
 </head>
 <body>
     <div class="header">
-        <div class="logo">Business Solutions</div>
+        <div class="logo">Company Name</div>
         <div class="nav">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
     </div>
     
-    <div class="hero" id="home">
-        <h1>Innovate. Build. Succeed.</h1>
-        <p>Providing world-class business solutions for modern enterprises.</p>
+    <div class="content white-bg" id="home">
+        <h1>Welcome to Our Company</h1>
+        <p>Providing top-quality services to meet your needs with expertise and dedication.</p>
     </div>
 
-    <div class="section light-bg" id="about">
+    <div class="section blue-bg" id="about">
         <h2>About Us</h2>
-        <p>We specialize in delivering business and technology solutions to help organizations thrive. Our team of experts ensures innovation and efficiency in every project, leveraging the latest technologies and business strategies.</p>
+        <p>We are a team of professionals committed to delivering excellence in our industry. Our mission is to provide innovative and effective solutions for our clients.</p>
     </div>
 
-    <div class="section dark-bg" id="services">
+    <div class="section white-bg" id="services">
         <h2>Our Services</h2>
-        <div class="services-grid">
-            <div class="service-box">
-                <h3>Consulting</h3>
-                <p>Expert guidance to optimize your business strategies and enhance productivity.</p>
+        <div class="services">
+            <div class="service-item">
+                <h3>Service 1</h3>
+                <p>High-quality solutions tailored to your needs.</p>
             </div>
-            <div class="service-box">
-                <h3>Technology Solutions</h3>
-                <p>Custom IT solutions, software development, and automation for your business.</p>
+            <div class="service-item">
+                <h3>Service 2</h3>
+                <p>Expert guidance and professional support.</p>
             </div>
-            <div class="service-box">
-                <h3>Project Management</h3>
-                <p>End-to-end project planning and execution with efficiency and innovation.</p>
+            <div class="service-item">
+                <h3>Service 3</h3>
+                <p>Innovative approaches to modern challenges.</p>
             </div>
         </div>
     </div>
 
-    <div class="section light-bg" id="projects">
-        <h2>Our Projects</h2>
-        <p>Explore our portfolio showcasing successful projects across industries, from IT infrastructure to business strategy implementations.</p>
-    </div>
-
-    <div class="section dark-bg" id="contact">
+    <div class="section blue-bg" id="contact">
         <h2>Contact Us</h2>
-        <div class="contact-info">
-            <p>Address: 456 Innovation Avenue, Tech City</p>
-            <p>Phone: +987 654 3210</p>
-            <p>Email: contact@businesssolutions.com</p>
-        </div>
+        <p>Email: info@company.com</p>
+        <p>Phone: +1234567890</p>
+        <p>Address: 123 Business Street, City, Country</p>
     </div>
 
     <div class="footer">
-        <p>&copy; 2025 Business Solutions. All Rights Reserved.</p>
+        <p>&copy; 2025 Company Name. All rights reserved.</p>
     </div>
 </body>
 </html>
