@@ -33,15 +33,31 @@
             text-decoration: none;
             margin: 0 15px;
             font-size: 18px;
+            transition: 0.3s;
         }
         .nav a:hover {
             text-decoration: underline;
+            color: #f39c12;
         }
         .hero {
             text-align: center;
             padding: 150px 20px;
             background: url('https://source.unsplash.com/1600x900/?business,corporate') no-repeat center center/cover;
             color: white;
+            position: relative;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        .hero h1, .hero p {
+            position: relative;
+            z-index: 1;
         }
         .hero h1 {
             font-size: 50px;
@@ -74,9 +90,18 @@
         }
         .service-box:hover {
             transform: translateY(-5px);
+            background: #f1c40f;
+            color: #2c3e50;
         }
         .contact-info p {
             font-size: 18px;
+        }
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -99,7 +124,7 @@
 
     <div class="section light-bg" id="about">
         <h2>About Us</h2>
-        <p>We specialize in delivering business and technology solutions to help organizations thrive. With a team of experts, we ensure innovation and efficiency in every project.</p>
+        <p>We specialize in delivering business and technology solutions to help organizations thrive. Our team of experts ensures innovation and efficiency in every project, leveraging the latest technologies and business strategies.</p>
     </div>
 
     <div class="section dark-bg" id="services">
@@ -107,22 +132,22 @@
         <div class="services-grid">
             <div class="service-box">
                 <h3>Consulting</h3>
-                <p>Expert guidance to optimize your business strategies.</p>
+                <p>Expert guidance to optimize your business strategies and enhance productivity.</p>
             </div>
             <div class="service-box">
                 <h3>Technology Solutions</h3>
-                <p>Custom IT solutions to drive your business forward.</p>
+                <p>Custom IT solutions, software development, and automation for your business.</p>
             </div>
             <div class="service-box">
                 <h3>Project Management</h3>
-                <p>Efficient planning and execution of your projects.</p>
+                <p>End-to-end project planning and execution with efficiency and innovation.</p>
             </div>
         </div>
     </div>
 
     <div class="section light-bg" id="projects">
         <h2>Our Projects</h2>
-        <p>Explore our portfolio showcasing successful projects across industries.</p>
+        <p>Explore our portfolio showcasing successful projects across industries, from IT infrastructure to business strategy implementations.</p>
     </div>
 
     <div class="section dark-bg" id="contact">
@@ -132,6 +157,10 @@
             <p>Phone: +987 654 3210</p>
             <p>Email: contact@businesssolutions.com</p>
         </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Business Solutions. All Rights Reserved.</p>
     </div>
 </body>
 </html>
