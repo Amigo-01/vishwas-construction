@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #ffffff;
         }
         .header {
             background-color: #004080;
@@ -26,9 +26,9 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 10px 20px;
+            padding: 10px 30px;
         }
-        .header img {
+        .logo {
             height: 50px;
         }
         .hero {
@@ -51,20 +51,12 @@
             width: 100%;
             height: 100%;
             background: url('logo.png') no-repeat center center;
-            background-size: 300px;
+            background-size: 30%;
             opacity: 0.2;
         }
         .hero h1 {
             font-size: 50px;
             animation: slideIn 2s;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideIn {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
         }
         .nav {
             display: flex;
@@ -85,12 +77,25 @@
         .nav a:hover {
             background: #004080;
         }
+        .services, .projects, .testimonials, .contact {
+            padding: 50px;
+            text-align: center;
+        }
+        .service-card {
+            background: #004080;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+            width: 250px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="logo.png" alt="Company Logo">
-        Vishwas Construction
+        <img src="logo.png" class="logo" alt="Vishwas Construction Logo">
+        <div>Vishwas Construction</div>
     </div>
     <div class="nav">
         <a href="#services">Services</a>
@@ -101,6 +106,29 @@
     <div class="hero">
         <h1>Welcome to Vishwas Construction</h1>
         <p>We Build Your Dreams</p>
+    </div>
+    <div class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-card">Construction</div>
+        <div class="service-card">3D Front Elevation</div>
+        <div class="service-card">Architectural Design</div>
+    </div>
+    <div class="projects" id="projects">
+        <h2>Our Projects</h2>
+        <img src="project.jpg" alt="Project Image" width="600">
+    </div>
+    <div class="testimonials" id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <p class="testimonial">"Outstanding service and top-quality work!"</p>
+    </div>
+    <div class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
     </div>
 </body>
 </html>
