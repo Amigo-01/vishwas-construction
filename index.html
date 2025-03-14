@@ -3,100 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Branding Company</title>
+    <title>Vishwas Construction</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            color: #333;
         }
         .header {
-            background: linear-gradient(90deg, #004080, #002d5a);
+            background-color: #002d5a;
             color: white;
             padding: 20px;
             text-align: center;
-            font-size: 28px;
+            font-size: 24px;
             font-weight: bold;
         }
         .hero {
+            background: url('construction-bg.jpg') no-repeat center center/cover;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 90vh;
             text-align: center;
-            background: url('branding-bg.jpg') no-repeat center center/cover;
             color: white;
+            font-size: 40px;
+            font-weight: bold;
         }
-        .hero h1 {
-            font-size: 50px;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .services {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+        .services, .projects, .about, .contact {
             padding: 50px;
-            background: white;
+            text-align: center;
         }
-        .service-card {
+        .services div, .projects div {
             background: #004080;
             color: white;
             padding: 20px;
-            margin: 15px;
-            width: 250px;
-            text-align: center;
+            margin: 10px;
+            display: inline-block;
             border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s;
         }
-        .service-card:hover {
+        .services div:hover, .projects div:hover {
             transform: scale(1.1);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
-        .contact {
-            text-align: center;
-            padding: 50px;
-            background: #f4f4f4;
-        }
-        .contact-form input, .contact-form textarea {
+        .contact input, .contact textarea {
             width: 80%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-        .contact-form button {
+        .contact button {
             background: #004080;
             color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background: #002d5a;
         }
     </style>
 </head>
 <body>
-    <div class="header">Branding Company</div>
-    <div class="hero">
-        <h1>Your Vision, Our Brand</h1>
+    <div class="header">Vishwas Construction</div>
+    <div class="hero">Building Dreams, Creating Reality</div>
+    
+    <div class="about">
+        <h2>About Us</h2>
+        <p>Vishwas Construction is a leading firm specializing in high-quality building and architectural solutions.</p>
     </div>
+    
     <div class="services">
-        <div class="service-card">Brand Strategy</div>
-        <div class="service-card">Creative Design</div>
-        <div class="service-card">Marketing Solutions</div>
+        <h2>Our Services</h2>
+        <div>Residential Construction</div>
+        <div>Commercial Projects</div>
+        <div>Architectural Design</div>
     </div>
+    
+    <div class="projects">
+        <h2>Our Projects</h2>
+        <div>Luxury Homes</div>
+        <div>Modern Office Spaces</div>
+    </div>
+    
     <div class="contact">
         <h2>Contact Us</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
+        <form>
+            <input type="text" placeholder="Your Name" required><br>
+            <input type="email" placeholder="Your Email" required><br>
+            <textarea placeholder="Your Message" required></textarea><br>
             <button type="submit">Send</button>
         </form>
     </div>
