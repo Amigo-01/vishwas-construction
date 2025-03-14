@@ -7,117 +7,164 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
         }
         .header {
             background-color: #004080;
             color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 28px;
-            font-weight: bold;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
             z-index: 1000;
         }
-        .hero {
-            position: relative;
-            text-align: center;
-            color: white;
-            background: url('background.jpg') no-repeat center center/cover;
-            height: 100vh;
+        .logo-container {
             display: flex;
             align-items: center;
-            justify-content: center;
-            flex-direction: column;
+            padding: 10px;
         }
-        .hero h1 {
-            font-size: 50px;
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
         }
         .nav {
             display: flex;
-            justify-content: center;
-            background: #002d5a;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            top: 60px;
-            z-index: 999;
         }
         .nav a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
+            padding: 10px 15px;
         }
         .nav a:hover {
-            background: #004080;
+            background-color: #002d5a;
         }
-        .services, .projects, .contact {
+        .content {
             text-align: center;
-            padding: 50px;
+            padding: 200px 20px 100px;
+            position: relative;
+            background: white;
+            min-height: 100vh;
         }
-        .service-card {
-            background: #004080;
-            color: white;
-            padding: 20px;
-            margin: 10px;
-            display: inline-block;
-            width: 250px;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        .content::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><polygon points="10,50 32,10 54,50" fill="%23004080" stroke="%23004080" stroke-width="3"></polygon><rect x="20" y="35" width="24" height="15" fill="%23004080" stroke="%23004080" stroke-width="2"></rect></svg>');
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0.08;
+            z-index: 0;
         }
-        .contact-form input, .contact-form textarea {
-            width: 80%;
-            padding: 10px;
+        .content h1, .content p {
+            position: relative;
+            z-index: 1;
+        }
+        .content h1 {
+            font-size: 55px;
+            font-weight: bold;
+            color: #004080;
             margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
         }
-        .contact-form button {
-            background: #004080;
+        .content p {
+            font-size: 26px;
+            font-style: italic;
+            color: #333;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+        }
+        .cta-button {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #004080;
             color: white;
-            padding: 10px 20px;
-            border: none;
+            font-size: 20px;
+            text-decoration: none;
             border-radius: 5px;
-            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #002d5a;
+        }
+        .section {
+            padding: 50px;
+            text-align: center;
+        }
+        .blue-bg { background: #004080; color: white; }
+        .white-bg { background: white; color: #004080; }
+        .section h2 {
+            font-size: 32px;
+        }
+        .section p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: auto;
         }
     </style>
 </head>
 <body>
-    <div class="header">Vishwas Construction</div>
-    <div class="nav">
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+    <div class="header">
+        <div class="logo-container">
+            <div class="logo">
+                <div class="icon">
+                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="10,50 32,10 54,50" fill="white" stroke="white" stroke-width="3"></polygon>
+                        <rect x="20" y="35" width="24" height="15" fill="white" stroke="white" stroke-width="2"></rect>
+                    </svg>
+                </div>
+                Vishwas Construction
+            </div>
+        </div>
+        <div class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Our Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
     </div>
-    <div class="hero">
-        <h1>Welcome to Vishwas Construction</h1>
-        <p>Building the future, restoring the past</p>
+    
+    <div class="content white-bg" id="home">
+        <h1>Welcome to</h1>
+        <h1>Vishwas Construction</h1>
+        <p>Your trusted partner in engineering and construction, delivering excellence in every project with precision and commitment to quality.</p>
+        <a href="#services" class="cta-button">Explore Our Services</a>
     </div>
-    <div class="services" id="services">
+    
+    <div class="section blue-bg" id="about">
+        <h2>About Us</h2>
+        <p>Vishwas Construction is dedicated to offering high-quality engineering and construction services. We specialize in providing innovative solutions for infrastructure development, residential and commercial projects, and engineering consultancy. Our expertise ensures that each project meets the highest industry standards.</p>
+    </div>
+
+    <div class="section white-bg" id="services">
         <h2>Our Services</h2>
-        <div class="service-card">Construction</div>
-        <div class="service-card">Architectural Design</div>
-        <div class="service-card">Project Management</div>
+        <p>Building plans as per Vastu | Permission drawings | Building contracts | Construction consultancy | Front Elevation 3D Drawings</p>
     </div>
-    <div class="projects" id="projects">
-        <h2>Our Projects</h2>
-        <p>High-quality construction projects delivered on time.</p>
-    </div>
-    <div class="contact" id="contact">
+    
+    <div class="section blue-bg" id="contact">
         <h2>Contact Us</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+        <p>No 2050, 22nd Main, Behind Adarsha School,<br>Fire Station Road, Vivekananda Nagar, Byadgi, India, 581106</p>
+        <p>Phone: 7813841428</p>
+        <p>Email: vishwasitand@gmail.com</p>
     </div>
 </body>
 </html>
