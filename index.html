@@ -54,7 +54,7 @@
         }
         .content {
             text-align: center;
-            padding: 180px 20px 100px;
+            padding: 200px 20px 100px;
             position: relative;
             background: white;
             min-height: 100vh;
@@ -70,7 +70,7 @@
             background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><polygon points="10,50 32,10 54,50" fill="%23004080" stroke="%23004080" stroke-width="3"></polygon><rect x="20" y="35" width="24" height="15" fill="%23004080" stroke="%23004080" stroke-width="2"></rect></svg>');
             background-repeat: no-repeat;
             background-size: contain;
-            opacity: 0.05;
+            opacity: 0.08;
             z-index: 0;
         }
         .content h1, .content p {
@@ -78,15 +78,32 @@
             z-index: 1;
         }
         .content h1 {
-            font-size: 50px;
+            font-size: 55px;
             font-weight: bold;
             color: #004080;
             margin: 10px 0;
         }
         .content p {
-            font-size: 24px;
+            font-size: 26px;
             font-style: italic;
             color: #333;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+        }
+        .cta-button {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #004080;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #002d5a;
         }
         .section {
             padding: 50px;
@@ -129,30 +146,21 @@
     <div class="content white-bg" id="home">
         <h1>Welcome to</h1>
         <h1>Vishwas Construction</h1>
-        <p>Your trusted partner in engineering and construction.</p>
+        <p>Your trusted partner in engineering and construction, delivering excellence in every project with precision and commitment to quality.</p>
+        <a href="#services" class="cta-button">Explore Our Services</a>
     </div>
-
+    
     <div class="section blue-bg" id="about">
         <h2>About Us</h2>
-        <p>Vishwas Construction is a trusted name in the construction industry, offering high-quality engineering and architectural solutions. Our expertise includes residential, commercial, and industrial projects, ensuring sustainability, innovation, and precision in every structure we build.</p>
+        <p>Vishwas Construction is dedicated to offering high-quality engineering and construction services. We specialize in providing innovative solutions for infrastructure development, residential and commercial projects, and engineering consultancy. Our expertise ensures that each project meets the highest industry standards.</p>
     </div>
 
     <div class="section white-bg" id="services">
         <h2>Our Services</h2>
-        <p>We provide expert construction solutions including:</p>
-        <p>✔ Building plans as per Vastu</p>
-        <p>✔ Permission drawings</p>
-        <p>✔ Building contracts</p>
-        <p>✔ Construction consultancy</p>
-        <p>✔ Front Elevation 3D Drawings</p>
+        <p>Building plans as per Vastu | Permission drawings | Building contracts | Construction consultancy | Front Elevation 3D Drawings</p>
     </div>
-
-    <div class="section blue-bg" id="projects">
-        <h2>Our Projects</h2>
-        <p>Explore our completed and ongoing projects, showcasing our expertise in engineering and construction.</p>
-    </div>
-
-    <div class="section white-bg" id="contact">
+    
+    <div class="section blue-bg" id="contact">
         <h2>Contact Us</h2>
         <p>No 2050, 22nd Main, Behind Adarsha School,<br>Fire Station Road, Vivekananda Nagar, Byadgi, India, 581106</p>
         <p>Phone: 7813841428</p>
