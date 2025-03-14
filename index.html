@@ -70,14 +70,22 @@
             height: 100vh;
             background: linear-gradient(to right, #004080, #002d5a);
             color: white;
+            position: relative;
         }
-        .hero h1 {
-            font-size: 50px;
-            margin: 10px 0;
+        .hero::before {
+            content: "Vishwas Construction";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.1);
+            z-index: 0;
         }
-        .hero p {
-            font-size: 22px;
-            margin-bottom: 20px;
+        .hero h1, .hero p, .hero .btn {
+            position: relative;
+            z-index: 1;
         }
         .section {
             padding: 60px 20px;
@@ -104,32 +112,6 @@
             padding: 20px;
             font-size: 14px;
         }
-        .contact-form {
-            max-width: 500px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            background: #004080;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background: #002d5a;
-        }
     </style>
 </head>
 <body>
@@ -148,13 +130,21 @@
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
-        <a href="#contact" class="btn">Get a Quote</a>
     </div>
     
     <div class="hero" id="home">
         <h1>Welcome to Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
-        <a href="#contact" class="btn">Contact Us</a>
+    </div>
+
+    <div class="section" id="about">
+        <h2>About Us</h2>
+        <p>Vishwas Construction is committed to delivering high-quality engineering and construction solutions. Our experienced team ensures precision, excellence, and reliability in every project we undertake.</p>
+    </div>
+
+    <div class="section" id="services">
+        <h2>Our Services</h2>
+        <p>Building plans as per Vastu | Permission drawings | Building contracts | Construction consultancy</p>
     </div>
 
     <div class="section" id="projects">
@@ -176,12 +166,6 @@
         <p>No 2050, 22nd Main, Behind Adarsha School,<br>Fire Station Road, Vivekananda Nagar, Byadgi, India, 581106</p>
         <p>Phone: 7813841428</p>
         <p>Email: vishwasitand@gmail.com</p>
-        <div class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </div>
     </div>
 
     <div class="footer">
