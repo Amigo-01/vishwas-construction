@@ -6,13 +6,14 @@
     <title>Company Name</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
         .header {
-            background-color: #004080;
+            background: linear-gradient(135deg, #004080, #002d5a);
             color: white;
             padding: 15px;
             display: flex;
@@ -23,24 +24,31 @@
             top: 0;
             left: 0;
             z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .logo {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
+            letter-spacing: 1px;
         }
         .nav a {
             color: white;
             text-decoration: none;
-            padding: 10px 15px;
+            padding: 12px 20px;
+            font-weight: bold;
+            transition: 0.3s;
         }
         .nav a:hover {
-            background-color: #002d5a;
+            background: #ffcc00;
+            color: #004080;
+            border-radius: 5px;
         }
         .welcome {
             text-align: center;
-            padding: 120px 20px;
+            padding: 150px 20px;
             background: white;
             position: relative;
+            overflow: hidden;
         }
         .welcome::before {
             content: "";
@@ -48,27 +56,39 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 300px;
-            height: 300px;
+            width: 400px;
+            height: 400px;
             background-image: url('logo.png');
             background-size: contain;
-            opacity: 0.1;
+            opacity: 0.07;
+            z-index: 0;
+        }
+        .welcome h1, .welcome p {
+            position: relative;
+            z-index: 1;
         }
         .section {
-            padding: 50px;
+            padding: 60px;
             text-align: center;
             background: white;
-            margin: 20px;
+            margin: 20px auto;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
         }
         .cta {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 12px 25px;
             background: #004080;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .cta:hover {
+            background: #ffcc00;
+            color: #004080;
         }
     </style>
 </head>
