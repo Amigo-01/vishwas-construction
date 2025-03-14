@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishwas Construction</title>
+    <title>Company Name</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            background-color: #f8f9fa;
         }
         .header {
             background-color: #004080;
             color: white;
-            padding: 15px;
+            padding: 15px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -24,35 +24,24 @@
             left: 0;
             z-index: 1000;
         }
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
         .logo {
             font-size: 24px;
             font-weight: bold;
-            color: white;
-            display: flex;
-            align-items: center;
-        }
-        .icon {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
         }
         .nav a {
             color: white;
             text-decoration: none;
-            padding: 10px 15px;
+            margin: 0 15px;
+            font-size: 18px;
         }
         .nav a:hover {
-            background-color: #002d5a;
+            text-decoration: underline;
         }
         .content {
             text-align: center;
             padding: 120px 20px 100px;
-            background: white;
             position: relative;
+            background: white;
         }
         .content::before {
             content: "";
@@ -60,12 +49,17 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 500px;
-            height: 500px;
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><polygon points="10,50 32,10 54,50" fill="%23004080" stroke="%23004080" stroke-width="3"></polygon><rect x="20" y="35" width="24" height="15" fill="%23004080" stroke="%23004080" stroke-width="2"></rect></svg>');
+            width: 300px;
+            height: 300px;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="30" stroke="%23004080" stroke-width="3" fill="none"></circle><text x="50%" y="50%" text-anchor="middle" fill="%23004080" font-size="12" font-family="Arial" dy=".3em">Company Logo</text></svg>');
             background-repeat: no-repeat;
             background-size: contain;
             opacity: 0.1;
+            z-index: 0;
+        }
+        .content h1, .content p {
+            position: relative;
+            z-index: 1;
         }
         .section {
             padding: 50px;
@@ -73,65 +67,54 @@
         }
         .blue-bg { background: #004080; color: white; }
         .white-bg { background: white; color: #004080; }
+        .section h2 {
+            font-size: 32px;
+        }
+        .section p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="logo-container">
-            <div class="logo">
-                <div class="icon">
-                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                        <polygon points="10,50 32,10 54,50" fill="white" stroke="white" stroke-width="3"></polygon>
-                        <rect x="20" y="35" width="24" height="15" fill="white" stroke="white" stroke-width="2"></rect>
-                    </svg>
-                </div>
-                Vishwas Construction
-            </div>
-        </div>
+        <div class="logo">Company Name</div>
         <div class="nav">
             <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#services">Our Services</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
     </div>
     
-    <div class="content" id="home">
-        <h1>Welcome to Vishwas Construction</h1>
-        <p>Your trusted partner in engineering and construction.</p>
+    <div class="content white-bg" id="home">
+        <h1>Welcome to</h1>
+        <h1>Company Name</h1>
+        <p>Your trusted partner in business.</p>
     </div>
 
     <div class="section blue-bg" id="about">
         <h2>About Us</h2>
-        <p>Vishwas Construction is committed to delivering high-quality engineering and construction solutions. 
-           Our team specializes in residential, commercial, and industrial projects, ensuring durability, 
-           efficiency, and vastu-compliant designs. Our mission is to create well-structured, modern, and 
-           functional buildings that stand the test of time.</p>
+        <p>We are a leading company providing top-notch solutions in our industry. Our expertise and commitment to quality make us a trusted choice for our clients.</p>
     </div>
 
     <div class="section white-bg" id="services">
         <h2>Our Services</h2>
-        <p>We offer a range of services including:</p>
-        <ul>
-            <li>Building plans as per Vastu</li>
-            <li>Permission drawings</li>
-            <li>Building contracts</li>
-            <li>Front elevation 3D drawings</li>
-            <li>Construction consultancy</li>
-        </ul>
+        <p>We specialize in offering high-quality services including project planning, consulting, and front elevation 3D drawings.</p>
     </div>
 
     <div class="section blue-bg" id="projects">
         <h2>Our Projects</h2>
-        <p>Explore our completed and ongoing projects, showcasing our expertise in engineering and construction.</p>
+        <p>Check out some of our successfully completed projects showcasing our excellence in execution and design.</p>
     </div>
 
     <div class="section white-bg" id="contact">
         <h2>Contact Us</h2>
-        <p>No 2050, 22nd Main, Behind Adarsha School,<br>Fire Station Road, Vivekananda Nagar, Byadgi, India, 581106</p>
-        <p>Phone: 7813841428</p>
-        <p>Email: vishwasitand@gmail.com</p>
+        <p>Address: 123 Business Street, City, Country</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Email: info@company.com</p>
     </div>
 </body>
 </html>
