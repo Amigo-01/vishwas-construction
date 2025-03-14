@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Name</title>
+    <title>Business Solutions</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #eef2f3;
         }
         .header {
-            background-color: #004080;
+            background-color: #2c3e50;
             color: white;
             padding: 15px 20px;
             display: flex;
@@ -25,7 +25,7 @@
             z-index: 1000;
         }
         .logo {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: bold;
         }
         .nav a {
@@ -37,49 +37,52 @@
         .nav a:hover {
             text-decoration: underline;
         }
-        .content {
+        .hero {
             text-align: center;
-            padding: 120px 20px 100px;
-            position: relative;
-            background: white;
+            padding: 150px 20px;
+            background: url('https://source.unsplash.com/1600x900/?business,corporate') no-repeat center center/cover;
+            color: white;
         }
-        .content::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 300px;
-            height: 300px;
-            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="30" stroke="%23004080" stroke-width="3" fill="none"></circle><text x="50%" y="50%" text-anchor="middle" fill="%23004080" font-size="12" font-family="Arial" dy=".3em">Company Logo</text></svg>');
-            background-repeat: no-repeat;
-            background-size: contain;
-            opacity: 0.1;
-            z-index: 0;
+        .hero h1 {
+            font-size: 50px;
+            margin: 10px 0;
         }
-        .content h1, .content p {
-            position: relative;
-            z-index: 1;
+        .hero p {
+            font-size: 22px;
+            max-width: 600px;
+            margin: auto;
         }
         .section {
-            padding: 50px;
+            padding: 60px;
             text-align: center;
         }
-        .blue-bg { background: #004080; color: white; }
-        .white-bg { background: white; color: #004080; }
-        .section h2 {
-            font-size: 32px;
+        .dark-bg { background: #2c3e50; color: white; }
+        .light-bg { background: white; color: #2c3e50; }
+        .services-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
-        .section p {
-            font-size: 20px;
-            max-width: 800px;
-            margin: auto;
+        .service-box {
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: white;
+            transition: 0.3s;
+        }
+        .service-box:hover {
+            transform: translateY(-5px);
+        }
+        .contact-info p {
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="logo">Company Name</div>
+        <div class="logo">Business Solutions</div>
         <div class="nav">
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -89,32 +92,46 @@
         </div>
     </div>
     
-    <div class="content white-bg" id="home">
-        <h1>Welcome to</h1>
-        <h1>Company Name</h1>
-        <p>Your trusted partner in business.</p>
+    <div class="hero" id="home">
+        <h1>Innovate. Build. Succeed.</h1>
+        <p>Providing world-class business solutions for modern enterprises.</p>
     </div>
 
-    <div class="section blue-bg" id="about">
+    <div class="section light-bg" id="about">
         <h2>About Us</h2>
-        <p>We are a leading company providing top-notch solutions in our industry. Our expertise and commitment to quality make us a trusted choice for our clients.</p>
+        <p>We specialize in delivering business and technology solutions to help organizations thrive. With a team of experts, we ensure innovation and efficiency in every project.</p>
     </div>
 
-    <div class="section white-bg" id="services">
+    <div class="section dark-bg" id="services">
         <h2>Our Services</h2>
-        <p>We specialize in offering high-quality services including project planning, consulting, and front elevation 3D drawings.</p>
+        <div class="services-grid">
+            <div class="service-box">
+                <h3>Consulting</h3>
+                <p>Expert guidance to optimize your business strategies.</p>
+            </div>
+            <div class="service-box">
+                <h3>Technology Solutions</h3>
+                <p>Custom IT solutions to drive your business forward.</p>
+            </div>
+            <div class="service-box">
+                <h3>Project Management</h3>
+                <p>Efficient planning and execution of your projects.</p>
+            </div>
+        </div>
     </div>
 
-    <div class="section blue-bg" id="projects">
+    <div class="section light-bg" id="projects">
         <h2>Our Projects</h2>
-        <p>Check out some of our successfully completed projects showcasing our excellence in execution and design.</p>
+        <p>Explore our portfolio showcasing successful projects across industries.</p>
     </div>
 
-    <div class="section white-bg" id="contact">
+    <div class="section dark-bg" id="contact">
         <h2>Contact Us</h2>
-        <p>Address: 123 Business Street, City, Country</p>
-        <p>Phone: +123 456 7890</p>
-        <p>Email: info@company.com</p>
+        <div class="contact-info">
+            <p>Address: 456 Innovation Avenue, Tech City</p>
+            <p>Phone: +987 654 3210</p>
+            <p>Email: contact@businesssolutions.com</p>
+        </div>
     </div>
 </body>
 </html>
