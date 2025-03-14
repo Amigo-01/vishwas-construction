@@ -9,103 +9,98 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #f4f4f4;
         }
         .header {
             background-color: #004080;
             color: white;
             padding: 20px;
             text-align: center;
-            font-size: 28px;
+            font-size: 24px;
             font-weight: bold;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        .header img {
+            height: 50px;
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+            background: url('background.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            animation: fadeIn 2s;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('logo.png') no-repeat center center;
+            background-size: 300px;
+            opacity: 0.2;
+        }
+        .hero h1 {
+            font-size: 50px;
+            animation: slideIn 2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
         .nav {
             display: flex;
             justify-content: center;
             background: #002d5a;
-            padding: 15px;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 60px;
+            z-index: 999;
         }
         .nav a {
             color: white;
             text-decoration: none;
-            padding: 12px 20px;
+            padding: 10px 20px;
             margin: 0 10px;
-            font-size: 18px;
         }
         .nav a:hover {
             background: #004080;
         }
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-            background: url('construction-bg.jpg') no-repeat center center/cover;
-            color: white;
-            font-size: 32px;
-            font-weight: bold;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .section {
-            padding: 50px;
-            text-align: center;
-        }
-        .services, .projects {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .card {
-            background: white;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 300px;
-            text-align: center;
-            border-radius: 10px;
-        }
-        .footer {
-            background: #002d5a;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
     </style>
 </head>
 <body>
-    <div class="header">Vishwas Construction</div>
+    <div class="header">
+        <img src="logo.png" alt="Company Logo">
+        Vishwas Construction
+    </div>
     <div class="nav">
-        <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
     </div>
-    <div class="hero">We Build Your Dreams</div>
-    <div class="section" id="about">
-        <h2>About Us</h2>
-        <p>Vishwas Construction is dedicated to delivering high-quality construction and architectural solutions with a touch of innovation.</p>
-    </div>
-    <div class="section" id="services">
-        <h2>Our Services</h2>
-        <div class="services">
-            <div class="card">Construction</div>
-            <div class="card">Architectural Design</div>
-            <div class="card">Project Management</div>
-        </div>
-    </div>
-    <div class="section" id="projects">
-        <h2>Our Projects</h2>
-        <div class="projects">
-            <div class="card">Residential Buildings</div>
-            <div class="card">Commercial Complexes</div>
-            <div class="card">Infrastructure Projects</div>
-        </div>
-    </div>
-    <div class="footer" id="contact">
-        <h3>Contact Us</h3>
-        <p>Email: contact@vishwasconstruction.com | Phone: +91 9876543210</p>
+    <div class="hero">
+        <h1>Welcome to Vishwas Construction</h1>
+        <p>We Build Your Dreams</p>
     </div>
 </body>
 </html>
