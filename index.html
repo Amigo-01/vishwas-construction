@@ -9,27 +9,20 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
+            background-color: #f4f4f4;
         }
         .header {
             background-color: #004080;
             color: white;
             padding: 20px;
             text-align: center;
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
             z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 30px;
-        }
-        .logo {
-            height: 50px;
         }
         .hero {
             position: relative;
@@ -41,22 +34,9 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            animation: fadeIn 2s;
-        }
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('logo.png') no-repeat center center;
-            background-size: 30%;
-            opacity: 0.2;
         }
         .hero h1 {
             font-size: 50px;
-            animation: slideIn 2s;
         }
         .nav {
             display: flex;
@@ -77,9 +57,9 @@
         .nav a:hover {
             background: #004080;
         }
-        .services, .projects, .testimonials, .contact {
-            padding: 50px;
+        .services, .projects, .contact {
             text-align: center;
+            padding: 50px;
         }
         .service-card {
             background: #004080;
@@ -88,42 +68,51 @@
             margin: 10px;
             display: inline-block;
             width: 250px;
+            text-align: center;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #004080;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <img src="logo.png" class="logo" alt="Vishwas Construction Logo">
-        <div>Vishwas Construction</div>
-    </div>
+    <div class="header">Vishwas Construction</div>
     <div class="nav">
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
-        <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
     </div>
     <div class="hero">
         <h1>Welcome to Vishwas Construction</h1>
-        <p>We Build Your Dreams</p>
+        <p>Building the future, restoring the past</p>
     </div>
     <div class="services" id="services">
         <h2>Our Services</h2>
         <div class="service-card">Construction</div>
-        <div class="service-card">3D Front Elevation</div>
         <div class="service-card">Architectural Design</div>
+        <div class="service-card">Project Management</div>
     </div>
     <div class="projects" id="projects">
         <h2>Our Projects</h2>
-        <img src="project.jpg" alt="Project Image" width="600">
-    </div>
-    <div class="testimonials" id="testimonials">
-        <h2>What Our Clients Say</h2>
-        <p class="testimonial">"Outstanding service and top-quality work!"</p>
+        <p>High-quality construction projects delivered on time.</p>
     </div>
     <div class="contact" id="contact">
         <h2>Contact Us</h2>
-        <form>
+        <form class="contact-form">
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
             <textarea placeholder="Your Message" required></textarea>
