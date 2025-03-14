@@ -61,21 +61,28 @@
             background-color: #002d5a;
             color: white;
         }
-        .content {
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
             text-align: center;
-            padding: 120px 20px;
-            background: white;
+            height: 100vh;
+            background: linear-gradient(to right, #004080, #002d5a);
+            color: white;
         }
-        .content h1 {
+        .hero h1 {
             font-size: 50px;
-            color: #004080;
+            margin: 10px 0;
+        }
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 20px;
         }
         .section {
             padding: 60px 20px;
             text-align: center;
         }
-        .blue-bg { background: #004080; color: white; }
-        .white-bg { background: white; color: #004080; }
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -90,26 +97,38 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             text-align: center;
         }
-        .testimonials {
-            background: #f9f9f9;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .testimonial {
-            max-width: 800px;
-            margin: auto;
-            font-style: italic;
-            font-size: 18px;
-            color: #333;
-            padding: 20px;
-            border-left: 5px solid #004080;
-        }
         .footer {
             background: #002d5a;
             color: white;
             text-align: center;
             padding: 20px;
             font-size: 14px;
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #004080;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #002d5a;
         }
     </style>
 </head>
@@ -127,33 +146,23 @@
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#projects">Projects</a>
-            <a href="#testimonials">Testimonials</a>
             <a href="#contact">Contact</a>
         </div>
         <a href="#contact" class="btn">Get a Quote</a>
     </div>
     
-    <div class="content" id="home">
+    <div class="hero" id="home">
         <h1>Welcome to Vishwas Construction</h1>
         <p>Your trusted partner in engineering and construction.</p>
+        <a href="#contact" class="btn">Contact Us</a>
     </div>
 
-    <div class="section blue-bg" id="about">
-        <h2>About Us</h2>
-        <p>We provide top-quality engineering and construction solutions.</p>
-    </div>
-
-    <div class="section white-bg" id="services">
-        <h2>Our Services</h2>
-        <p>Building plans as per Vastu | Building contracts | Construction consultancy</p>
-    </div>
-
-    <div class="section blue-bg" id="projects">
+    <div class="section" id="projects">
         <h2>Our Projects</h2>
         <div class="project-grid">
             <div class="project-card">
                 <h3>Project 1</h3>
-                <p>High-rise commercial building</p>
+                <p>Commercial building</p>
             </div>
             <div class="project-card">
                 <h3>Project 2</h3>
@@ -162,17 +171,14 @@
         </div>
     </div>
 
-    <div class="testimonials" id="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonial">"Vishwas Construction delivered our dream project on time with great quality! Highly recommended." - Client A</div>
-        <div class="testimonial">"Professional and reliable service. Their expertise in Vastu-based construction is outstanding." - Client B</div>
-    </div>
-
-    <div class="section white-bg" id="contact">
+    <div class="section" id="contact">
         <h2>Contact Us</h2>
-        <p>Address: 2050, 22nd Main, Byadgi, India</p>
-        <p>Phone: 7813841428</p>
-        <p>Email: vishwasitand@gmail.com</p>
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </div>
     </div>
 
     <div class="footer">
