@@ -6,16 +6,16 @@
     <title>Company Name</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
         }
         .header {
-            background-color: #004080;
+            background: linear-gradient(90deg, #002d5a, #004080);
             color: white;
-            padding: 15px 20px;
+            padding: 20px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -24,66 +24,72 @@
             top: 0;
             left: 0;
             z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
         .logo {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
+            letter-spacing: 2px;
         }
         .nav a {
             color: white;
             text-decoration: none;
-            padding: 10px 15px;
+            padding: 12px 20px;
+            margin: 0 10px;
             transition: 0.3s;
+            font-weight: bold;
+            border-radius: 5px;
         }
         .nav a:hover {
-            background-color: #002d5a;
+            background-color: rgba(255, 255, 255, 0.2);
         }
-        .content {
-            padding: 100px 20px 50px;
+        .hero {
+            padding: 150px 20px;
             text-align: center;
+            background: url('https://source.unsplash.com/1600x900/?architecture,city') no-repeat center center/cover;
+            color: white;
             position: relative;
-            background: white;
         }
-        .content h1 {
-            font-size: 48px;
-            color: #004080;
-            margin-bottom: 10px;
+        .hero h1 {
+            font-size: 50px;
+            margin: 0;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
         }
-        .content p {
-            font-size: 20px;
+        .hero p {
+            font-size: 22px;
             max-width: 800px;
-            margin: auto;
-            color: #555;
+            margin: 20px auto;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
         }
         .section {
-            padding: 50px;
+            padding: 60px;
             text-align: center;
         }
-        .blue-bg { background: #004080; color: white; }
-        .white-bg { background: white; color: #004080; }
-        .services {
+        .dark-bg { background: #002d5a; color: white; }
+        .light-bg { background: white; color: #004080; }
+        .services-container {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            flex-wrap: wrap;
+            gap: 30px;
         }
-        .service-item {
+        .service-box {
             background: white;
             padding: 20px;
-            width: 300px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            text-align: center;
+            width: 280px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s;
         }
-        .service-item h3 {
-            color: #004080;
+        .service-box:hover {
+            transform: translateY(-5px);
         }
         .footer {
-            background-color: #002d5a;
+            background-color: #001a3d;
             color: white;
             text-align: center;
-            padding: 15px;
-            margin-top: 20px;
+            padding: 20px;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -98,37 +104,37 @@
         </div>
     </div>
     
-    <div class="content white-bg" id="home">
+    <div class="hero" id="home">
         <h1>Welcome to Our Company</h1>
-        <p>Providing top-quality services to meet your needs with expertise and dedication.</p>
+        <p>Delivering excellence through innovation and professionalism.</p>
     </div>
 
-    <div class="section blue-bg" id="about">
+    <div class="section dark-bg" id="about">
         <h2>About Us</h2>
-        <p>We are a team of professionals committed to delivering excellence in our industry. Our mission is to provide innovative and effective solutions for our clients.</p>
+        <p>We are industry leaders providing top-notch services that redefine quality and efficiency. Our goal is to innovate and build lasting relationships with our clients.</p>
     </div>
 
-    <div class="section white-bg" id="services">
+    <div class="section light-bg" id="services">
         <h2>Our Services</h2>
-        <div class="services">
-            <div class="service-item">
-                <h3>Service 1</h3>
-                <p>High-quality solutions tailored to your needs.</p>
+        <div class="services-container">
+            <div class="service-box">
+                <h3>Consulting</h3>
+                <p>Providing expert advice and guidance.</p>
             </div>
-            <div class="service-item">
-                <h3>Service 2</h3>
-                <p>Expert guidance and professional support.</p>
+            <div class="service-box">
+                <h3>Project Management</h3>
+                <p>Efficient handling of complex projects.</p>
             </div>
-            <div class="service-item">
-                <h3>Service 3</h3>
-                <p>Innovative approaches to modern challenges.</p>
+            <div class="service-box">
+                <h3>Design & Development</h3>
+                <p>Innovative solutions for modern needs.</p>
             </div>
         </div>
     </div>
 
-    <div class="section blue-bg" id="contact">
+    <div class="section dark-bg" id="contact">
         <h2>Contact Us</h2>
-        <p>Email: info@company.com</p>
+        <p>Email: contact@company.com</p>
         <p>Phone: +1234567890</p>
         <p>Address: 123 Business Street, City, Country</p>
     </div>
