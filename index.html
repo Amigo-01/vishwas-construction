@@ -9,89 +9,103 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
         }
         .header {
-            background-color: #002d5a;
+            background-color: #004080;
             color: white;
             padding: 20px;
             text-align: center;
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
         }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background: #002d5a;
+            padding: 15px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        .nav a:hover {
+            background: #004080;
+        }
         .hero {
+            text-align: center;
+            padding: 80px 20px;
             background: url('construction-bg.jpg') no-repeat center center/cover;
-            height: 100vh;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            height: 400px;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            color: white;
-            font-size: 40px;
-            font-weight: bold;
         }
-        .services, .projects, .about, .contact {
+        .section {
             padding: 50px;
             text-align: center;
         }
-        .services div, .projects div {
-            background: #004080;
-            color: white;
+        .services, .projects {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: white;
             padding: 20px;
-            margin: 10px;
-            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
             border-radius: 10px;
-            transition: transform 0.3s;
         }
-        .services div:hover, .projects div:hover {
-            transform: scale(1.1);
-        }
-        .contact input, .contact textarea {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .contact button {
-            background: #004080;
+        .footer {
+            background: #002d5a;
             color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
     <div class="header">Vishwas Construction</div>
-    <div class="hero">Building Dreams, Creating Reality</div>
-    
-    <div class="about">
+    <div class="nav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="hero">We Build Your Dreams</div>
+    <div class="section" id="about">
         <h2>About Us</h2>
-        <p>Vishwas Construction is a leading firm specializing in high-quality building and architectural solutions.</p>
+        <p>Vishwas Construction is dedicated to delivering high-quality construction and architectural solutions with a touch of innovation.</p>
     </div>
-    
-    <div class="services">
+    <div class="section" id="services">
         <h2>Our Services</h2>
-        <div>Residential Construction</div>
-        <div>Commercial Projects</div>
-        <div>Architectural Design</div>
+        <div class="services">
+            <div class="card">Construction</div>
+            <div class="card">Architectural Design</div>
+            <div class="card">Project Management</div>
+        </div>
     </div>
-    
-    <div class="projects">
+    <div class="section" id="projects">
         <h2>Our Projects</h2>
-        <div>Luxury Homes</div>
-        <div>Modern Office Spaces</div>
+        <div class="projects">
+            <div class="card">Residential Buildings</div>
+            <div class="card">Commercial Complexes</div>
+            <div class="card">Infrastructure Projects</div>
+        </div>
     </div>
-    
-    <div class="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required><br>
-            <input type="email" placeholder="Your Email" required><br>
-            <textarea placeholder="Your Message" required></textarea><br>
-            <button type="submit">Send</button>
-        </form>
+    <div class="footer" id="contact">
+        <h3>Contact Us</h3>
+        <p>Email: contact@vishwasconstruction.com | Phone: +91 9876543210</p>
     </div>
 </body>
 </html>
